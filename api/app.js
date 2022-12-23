@@ -28,9 +28,9 @@ const addResponse = async({request, response, params}) => {
   response.body = res
 }
 
-router.get("/", getMessages)
-router.post("/", newMessage)
-router.post("/:id", addResponse)
+router.get("/api", getMessages)
+router.post("/api", newMessage)
+router.post("/api/:id", addResponse)
 
 app.use(oakCors())
 app.use(router.routes());
