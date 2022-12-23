@@ -1,0 +1,2872 @@
+* 
+* ==> Audit <==
+* |------------|---------------------|----------|------------------------|---------|---------------------|---------------------|
+|  Command   |        Args         | Profile  |          User          | Version |     Start Time      |      End Time       |
+|------------|---------------------|----------|------------------------|---------|---------------------|---------------------|
+| dashboard  |                     | minikube | LAPTOP-JK1MMFOB\LENOVO | v1.28.0 | 12 Dec 22 11:11 EET |                     |
+| start      |                     | minikube | LAPTOP-JK1MMFOB\LENOVO | v1.28.0 | 12 Dec 22 11:11 EET |                     |
+| docker-env | minikube docker-env | minikube | LAPTOP-JK1MMFOB\LENOVO | v1.28.0 | 12 Dec 22 11:26 EET |                     |
+| docker-env | minikube docker-env | minikube | LAPTOP-JK1MMFOB\LENOVO | v1.28.0 | 12 Dec 22 11:30 EET |                     |
+| start      |                     | minikube | LAPTOP-JK1MMFOB\LENOVO | v1.28.0 | 12 Dec 22 11:30 EET |                     |
+| profile    | list                | minikube | LAPTOP-JK1MMFOB\LENOVO | v1.28.0 | 12 Dec 22 11:30 EET | 12 Dec 22 11:30 EET |
+| docker-env | minikube docker-env | minikube | LAPTOP-JK1MMFOB\LENOVO | v1.28.0 | 12 Dec 22 11:31 EET |                     |
+| docker-env | minikube docker-env | minikube | LAPTOP-JK1MMFOB\LENOVO | v1.28.0 | 12 Dec 22 11:31 EET |                     |
+| delete     | --all               | minikube | LAPTOP-JK1MMFOB\LENOVO | v1.28.0 | 12 Dec 22 11:32 EET | 12 Dec 22 11:32 EET |
+| start      |                     | minikube | LAPTOP-JK1MMFOB\LENOVO | v1.28.0 | 12 Dec 22 11:32 EET |                     |
+| start      | --no-vtx-check      | minikube | LAPTOP-JK1MMFOB\LENOVO | v1.28.0 | 12 Dec 22 11:41 EET |                     |
+|------------|---------------------|----------|------------------------|---------|---------------------|---------------------|
+
+* 
+* ==> Last Start <==
+* Log file created at: 2022/12/12 11:41:19
+Running on machine: LAPTOP-JK1MMFOB
+Binary: Built with gc go1.19.2 for windows/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1212 11:41:19.458721   19548 out.go:296] Setting OutFile to fd 96 ...
+I1212 11:41:19.480597   19548 out.go:343] TERM=,COLORTERM=, which probably does not support color
+I1212 11:41:19.480597   19548 out.go:309] Setting ErrFile to fd 100...
+I1212 11:41:19.480597   19548 out.go:343] TERM=,COLORTERM=, which probably does not support color
+I1212 11:41:19.500063   19548 out.go:303] Setting JSON to false
+I1212 11:41:19.507759   19548 start.go:116] hostinfo: {"hostname":"LAPTOP-JK1MMFOB","uptime":136649,"bootTime":1670701430,"procs":302,"os":"windows","platform":"Microsoft Windows 10 Home","platformFamily":"Standalone Workstation","platformVersion":"10.0.19044 Build 19044","kernelVersion":"10.0.19044 Build 19044","kernelArch":"x86_64","virtualizationSystem":"","virtualizationRole":"","hostId":"9cd0f592-9686-48c3-9255-4eae430b60ea"}
+W1212 11:41:19.508367   19548 start.go:124] gopshost.Virtualization returned error: not implemented yet
+I1212 11:41:19.509445   19548 out.go:177] * minikube v1.28.0 en Microsoft Windows 10 Home 10.0.19044 Build 19044
+I1212 11:41:19.510609   19548 notify.go:220] Checking for updates...
+I1212 11:41:19.511390   19548 config.go:180] Loaded profile config "minikube": Driver=virtualbox, ContainerRuntime=docker, KubernetesVersion=v1.25.3
+I1212 11:41:19.511987   19548 driver.go:365] Setting default libvirt URI to qemu:///system
+W1212 11:41:19.513127   19548 start.go:716] api.Load failed for minikube: filestore "minikube": Docker machine "minikube" does not exist. Use "docker-machine ls" to list machines. Use "docker-machine create" to add a new one.
+I1212 11:41:19.568108   19548 virtualbox.go:136] virtual box version: 6.1.18r142142
+I1212 11:41:19.570694   19548 out.go:177] * Using the virtualbox driver based on existing profile
+I1212 11:41:19.574368   19548 start.go:282] selected driver: virtualbox
+I1212 11:41:19.574963   19548 start.go:808] validating driver "virtualbox" against &{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO:https://storage.googleapis.com/minikube/iso/minikube-v1.28.0-amd64.iso KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.36@sha256:8debc1b6a335075c5f99bfbf131b4f5566f68c6500dc5991817832e55fcc9456 Memory:2200 CPUs:2 DiskSize:20000 VMDriver: Driver:virtualbox HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:0 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.25.3 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP: Port:8443 KubernetesVersion:v1.25.3 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:C:\Users\LENOVO:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath: SocketVMnetClientPath:/opt/socket_vmnet/bin/socket_vmnet_client SocketVMnetPath:/var/run/socket_vmnet}
+I1212 11:41:19.575536   19548 start.go:819] status for virtualbox: {Installed:true Healthy:true Running:false NeedsImprovement:false Error:<nil> Reason: Fix: Doc: Version:6.1.18r142142
+}
+I1212 11:41:19.643866   19548 cni.go:95] Creating CNI manager for ""
+I1212 11:41:19.643866   19548 cni.go:169] CNI unnecessary in this configuration, recommending no CNI
+I1212 11:41:19.644428   19548 start_flags.go:317] config:
+{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO:https://storage.googleapis.com/minikube/iso/minikube-v1.28.0-amd64.iso KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.36@sha256:8debc1b6a335075c5f99bfbf131b4f5566f68c6500dc5991817832e55fcc9456 Memory:2200 CPUs:2 DiskSize:20000 VMDriver: Driver:virtualbox HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:0 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:true DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.25.3 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP: Port:8443 KubernetesVersion:v1.25.3 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:C:\Users\LENOVO:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath: SocketVMnetClientPath:/opt/socket_vmnet/bin/socket_vmnet_client SocketVMnetPath:/var/run/socket_vmnet}
+I1212 11:41:19.647978   19548 iso.go:124] acquiring lock: {Name:mkc450a68ada7007eb7e4b6cc169982dc684545c Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I1212 11:41:19.665539   19548 out.go:177] * Starting control plane node minikube in cluster minikube
+I1212 11:41:19.667574   19548 preload.go:132] Checking if preload exists for k8s version v1.25.3 and runtime docker
+I1212 11:41:19.667574   19548 preload.go:148] Found local preload: C:\Users\LENOVO\.minikube\cache\preloaded-tarball\preloaded-images-k8s-v18-v1.25.3-docker-overlay2-amd64.tar.lz4
+I1212 11:41:19.668130   19548 cache.go:57] Caching tarball of preloaded images
+I1212 11:41:19.668664   19548 preload.go:174] Found C:\Users\LENOVO\.minikube\cache\preloaded-tarball\preloaded-images-k8s-v18-v1.25.3-docker-overlay2-amd64.tar.lz4 in cache, skipping download
+I1212 11:41:19.668664   19548 cache.go:60] Finished verifying existence of preloaded tar for  v1.25.3 on docker
+I1212 11:41:19.669211   19548 profile.go:148] Saving config to C:\Users\LENOVO\.minikube\profiles\minikube\config.json ...
+I1212 11:41:19.672361   19548 cache.go:208] Successfully downloaded all kic artifacts
+I1212 11:41:19.672394   19548 start.go:364] acquiring machines lock for minikube: {Name:mkcbc4b576aa61b66884ddcef13567e4c8f4f9fa Clock:{} Delay:500ms Timeout:13m0s Cancel:<nil>}
+I1212 11:41:19.672945   19548 start.go:368] acquired machines lock for "minikube" in 551.6µs
+I1212 11:41:19.673451   19548 start.go:93] Provisioning new machine with config: &{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO:https://storage.googleapis.com/minikube/iso/minikube-v1.28.0-amd64.iso KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.36@sha256:8debc1b6a335075c5f99bfbf131b4f5566f68c6500dc5991817832e55fcc9456 Memory:2200 CPUs:2 DiskSize:20000 VMDriver: Driver:virtualbox HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:0 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:true DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.25.3 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP: Port:8443 KubernetesVersion:v1.25.3 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:C:\Users\LENOVO:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath: SocketVMnetClientPath:/opt/socket_vmnet/bin/socket_vmnet_client SocketVMnetPath:/var/run/socket_vmnet} &{Name: IP: Port:8443 KubernetesVersion:v1.25.3 ContainerRuntime:docker ControlPlane:true Worker:true}
+I1212 11:41:19.673490   19548 start.go:125] createHost starting for "" (driver="virtualbox")
+I1212 11:41:19.675184   19548 out.go:204] * Creando virtualbox VM (CPUs=2, Memory=2200MB, Disk=20000MB) ...
+I1212 11:41:19.676954   19548 start.go:159] libmachine.API.Create for "minikube" (driver="virtualbox")
+I1212 11:41:19.676954   19548 client.go:168] LocalClient.Create starting
+I1212 11:41:19.677578   19548 main.go:134] libmachine: Reading certificate data from C:\Users\LENOVO\.minikube\certs\ca.pem
+I1212 11:41:19.678147   19548 main.go:134] libmachine: Decoding PEM data...
+I1212 11:41:19.678709   19548 main.go:134] libmachine: Parsing certificate...
+I1212 11:41:19.680920   19548 main.go:134] libmachine: Reading certificate data from C:\Users\LENOVO\.minikube\certs\cert.pem
+I1212 11:41:19.681498   19548 main.go:134] libmachine: Decoding PEM data...
+I1212 11:41:19.681498   19548 main.go:134] libmachine: Parsing certificate...
+I1212 11:41:19.681498   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe --version
+I1212 11:41:19.717973   19548 main.go:134] libmachine: STDOUT:
+{
+6.1.18r142142
+}
+I1212 11:41:19.717973   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:41:19.718553   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe list hostonlyifs
+I1212 11:41:20.709652   19548 main.go:134] libmachine: STDOUT:
+{
+Name:            VirtualBox Host-Only Ethernet Adapter
+GUID:            e6c82392-8a6f-4ef4-baa0-61a8ed38e2d7
+DHCP:            Disabled
+IPAddress:       192.168.56.1
+NetworkMask:     255.255.255.0
+IPV6Address:     fe80::c2b6:2d2a:d1f4:82cf
+IPV6NetworkMaskPrefixLength: 64
+HardwareAddress: 0a:00:27:00:00:18
+MediumType:      Ethernet
+Wireless:        No
+Status:          Up
+VBoxNetworkName: HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter
+
+}
+I1212 11:41:20.709652   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:41:20.712333   19548 main.go:134] libmachine: Downloading C:\Users\LENOVO\.minikube\cache\boot2docker.iso from file://C:/Users/LENOVO/.minikube/cache/iso/amd64/minikube-v1.28.0-amd64.iso...
+I1212 11:41:22.081723   19548 main.go:134] libmachine: Creating VirtualBox VM...
+I1212 11:41:22.082356   19548 main.go:134] libmachine: Creating SSH key...
+I1212 11:41:22.225225   19548 main.go:134] libmachine: Creating disk image...
+I1212 11:41:22.225225   19548 main.go:134] libmachine: Creating 20000 MB hard disk image...
+I1212 11:41:22.225225   19548 main.go:134] libmachine: Writing magic tar header
+I1212 11:41:22.226309   19548 main.go:134] libmachine: Writing SSH key tar header
+I1212 11:41:22.227211   19548 main.go:134] libmachine: Calling inner createDiskImage
+I1212 11:41:22.227211   19548 main.go:134] libmachine: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe convertfromraw stdin C:\Users\LENOVO\.minikube\machines\minikube\disk.vmdk 20971520000 --format VMDK
+I1212 11:41:22.227211   19548 main.go:134] libmachine: Starting command
+I1212 11:41:22.234854   19548 main.go:134] libmachine: Copying to stdin
+I1212 11:41:22.272456   19548 main.go:134] libmachine: Filling zeroes
+I1212 11:41:44.601735   19548 main.go:134] libmachine: Closing STDIN
+I1212 11:41:44.601735   19548 main.go:134] libmachine: Waiting on cmd
+I1212 11:41:44.614901   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe createvm --basefolder C:\Users\LENOVO\.minikube\machines\minikube --name minikube --register
+I1212 11:41:45.313058   19548 main.go:134] libmachine: STDOUT:
+{
+Virtual machine 'minikube' is created and registered.
+UUID: d4c78b0a-7063-43f7-9cca-cbe93dcd10c9
+Settings file: 'C:\Users\LENOVO\.minikube\machines\minikube\minikube\minikube.vbox'
+}
+I1212 11:41:45.313058   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:41:45.313058   19548 main.go:134] libmachine: VM CPUS: 2
+I1212 11:41:45.313058   19548 main.go:134] libmachine: VM Memory: 2200
+I1212 11:41:45.313058   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe modifyvm minikube --firmware bios --bioslogofadein off --bioslogofadeout off --bioslogodisplaytime 0 --biosbootmenu disabled --ostype Linux26_64 --cpus 2 --memory 2200 --acpi on --ioapic on --rtcuseutc on --natdnshostresolver1 on --natdnsproxy1 off --cpuhotplug off --pae on --hpet on --hwvirtex on --nestedpaging on --largepages on --vtxvpid on --accelerate3d off --boot1 dvd
+I1212 11:41:45.392446   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:41:45.392446   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:41:45.392446   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe modifyvm minikube --nic1 nat --nictype1 virtio --cableconnected1 on
+I1212 11:41:45.454603   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:41:45.454603   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:41:45.454603   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe storagectl minikube --name SATA --add sata --hostiocache on
+I1212 11:41:45.515838   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:41:45.515838   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:41:45.515838   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe storageattach minikube --storagectl SATA --port 0 --device 0 --type dvddrive --medium C:\Users\LENOVO\.minikube\machines\minikube\boot2docker.iso
+I1212 11:41:45.594642   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:41:45.594642   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:41:45.596119   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe storageattach minikube --storagectl SATA --port 1 --device 0 --type hdd --medium C:\Users\LENOVO\.minikube\machines\minikube\disk.vmdk
+I1212 11:41:45.657512   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:41:45.657512   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:41:45.657512   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe guestproperty set minikube /VirtualBox/GuestAdd/SharedFolders/MountPrefix /
+I1212 11:41:45.719033   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:41:45.719033   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:41:45.719033   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe guestproperty set minikube /VirtualBox/GuestAdd/SharedFolders/MountDir /
+I1212 11:41:45.781666   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:41:45.781666   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:41:45.781666   19548 main.go:134] libmachine: setting up shareDir '\\?\c:\Users' -> 'c/Users'
+I1212 11:41:45.781666   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe sharedfolder add minikube --name c/Users --hostpath \\?\c:\Users --automount
+I1212 11:41:45.843178   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:41:45.843178   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:41:45.843178   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe setextradata minikube VBoxInternal2/SharedFoldersEnableSymlinksCreate/c/Users 1
+I1212 11:41:45.890212   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:41:45.890212   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:41:45.890212   19548 main.go:134] libmachine: Starting the VM...
+I1212 11:41:45.890212   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe showvminfo minikube --machinereadable
+I1212 11:41:45.968334   19548 main.go:134] libmachine: STDOUT:
+{
+name="minikube"
+groups="/"
+ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+UUID="d4c78b0a-7063-43f7-9cca-cbe93dcd10c9"
+CfgFile="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\minikube.vbox"
+SnapFldr="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\Snapshots"
+LogFldr="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\Logs"
+hardwareuuid="d4c78b0a-7063-43f7-9cca-cbe93dcd10c9"
+memory=2200
+pagefusion="off"
+vram=8
+cpuexecutioncap=100
+hpet="on"
+cpu-profile="host"
+chipset="piix3"
+firmware="BIOS"
+cpus=2
+pae="on"
+longmode="on"
+triplefaultreset="off"
+apic="on"
+x2apic="off"
+nested-hw-virt="off"
+cpuid-portability-level=0
+bootmenu="disabled"
+boot1="dvd"
+boot2="dvd"
+boot3="disk"
+boot4="none"
+acpi="on"
+ioapic="on"
+biosapic="apic"
+biossystemtimeoffset=0
+rtcuseutc="on"
+hwvirtex="on"
+nestedpaging="on"
+largepages="on"
+vtxvpid="on"
+vtxux="on"
+paravirtprovider="default"
+effparavirtprovider="kvm"
+VMState="poweroff"
+VMStateChangeTime="2022-12-12T09:41:45.266000000"
+graphicscontroller="vboxvga"
+monitorcount=1
+accelerate3d="off"
+accelerate2dvideo="off"
+teleporterenabled="off"
+teleporterport=0
+teleporteraddress=""
+teleporterpassword=""
+tracing-enabled="off"
+tracing-allow-vm-access="off"
+tracing-config=""
+autostart-enabled="off"
+autostart-delay=0
+defaultfrontend=""
+vmprocpriority="default"
+storagecontrollername0="SATA"
+storagecontrollertype0="IntelAhci"
+storagecontrollerinstance0="0"
+storagecontrollermaxportcount0="30"
+storagecontrollerportcount0="30"
+storagecontrollerbootable0="on"
+"SATA-0-0"="C:\Users\LENOVO\.minikube\machines\minikube\boot2docker.iso"
+"SATA-ImageUUID-0-0"="4a398463-4403-4371-bfca-112fbb86962e"
+"SATA-tempeject"="off"
+"SATA-IsEjected"="off"
+"SATA-1-0"="C:\Users\LENOVO\.minikube\machines\minikube\disk.vmdk"
+"SATA-ImageUUID-1-0"="f0debdad-478f-4e16-8540-259322e8fe22"
+"SATA-2-0"="none"
+"SATA-3-0"="none"
+"SATA-4-0"="none"
+"SATA-5-0"="none"
+"SATA-6-0"="none"
+"SATA-7-0"="none"
+"SATA-8-0"="none"
+"SATA-9-0"="none"
+"SATA-10-0"="none"
+"SATA-11-0"="none"
+"SATA-12-0"="none"
+"SATA-13-0"="none"
+"SATA-14-0"="none"
+"SATA-15-0"="none"
+"SATA-16-0"="none"
+"SATA-17-0"="none"
+"SATA-18-0"="none"
+"SATA-19-0"="none"
+"SATA-20-0"="none"
+"SATA-21-0"="none"
+"SATA-22-0"="none"
+"SATA-23-0"="none"
+"SATA-24-0"="none"
+"SATA-25-0"="none"
+"SATA-26-0"="none"
+"SATA-27-0"="none"
+"SATA-28-0"="none"
+"SATA-29-0"="none"
+natnet1="nat"
+macaddress1="0800270C89E6"
+cableconnected1="on"
+nic1="nat"
+nictype1="virtio"
+nicspeed1="0"
+mtu="0"
+sockSnd="64"
+sockRcv="64"
+tcpWndSnd="64"
+tcpWndRcv="64"
+nic2="none"
+nic3="none"
+nic4="none"
+nic5="none"
+nic6="none"
+nic7="none"
+nic8="none"
+hidpointing="ps2mouse"
+hidkeyboard="ps2kbd"
+uart1="off"
+uart2="off"
+uart3="off"
+uart4="off"
+lpt1="off"
+lpt2="off"
+audio="dsound"
+audio_out="off"
+audio_in="off"
+clipboard="disabled"
+draganddrop="disabled"
+vrde="off"
+usb="off"
+ehci="off"
+xhci="off"
+SharedFolderNameMachineMapping1="c/Users"
+SharedFolderPathMachineMapping1="\\\\?\\c:\\Users"
+videocap="off"
+videocapaudio="off"
+capturescreens=""
+capturefilename="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\minikube.webm"
+captureres="1024x768"
+capturevideorate=512
+capturevideofps=25
+captureopts=""
+GuestMemoryBalloon=0
+}
+I1212 11:41:45.968334   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:41:45.968334   19548 main.go:134] libmachine: Check network to re-create if needed...
+I1212 11:41:45.968334   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe list hostonlyifs
+I1212 11:41:46.092843   19548 main.go:134] libmachine: STDOUT:
+{
+Name:            VirtualBox Host-Only Ethernet Adapter
+GUID:            e6c82392-8a6f-4ef4-baa0-61a8ed38e2d7
+DHCP:            Disabled
+IPAddress:       192.168.56.1
+NetworkMask:     255.255.255.0
+IPV6Address:     fe80::c2b6:2d2a:d1f4:82cf
+IPV6NetworkMaskPrefixLength: 64
+HardwareAddress: 0a:00:27:00:00:18
+MediumType:      Ethernet
+Wireless:        No
+Status:          Up
+VBoxNetworkName: HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter
+
+}
+I1212 11:41:46.092843   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:41:46.143464   19548 main.go:134] libmachine: Searching for hostonly interface for IPv4: 192.168.59.1 and Mask: ffffff00
+I1212 11:41:46.143464   19548 main.go:134] libmachine: Not found
+I1212 11:41:46.143464   19548 main.go:134] libmachine: Windows might ask for the permission to create a network adapter. Sometimes, such confirmation window is minimized in the taskbar.
+I1212 11:41:46.143464   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe hostonlyif create
+I1212 11:41:53.651047   19548 main.go:134] libmachine: STDOUT:
+{
+Interface 'VirtualBox Host-Only Ethernet Adapter #2' was successfully created
+}
+I1212 11:41:53.651047   19548 main.go:134] libmachine: STDERR:
+{
+0%!.(MISSING).10%!.(MISSING).20%!.(MISSING).30%!.(MISSING).40%!.(MISSING).50%!.(MISSING).60%!.(MISSING).70%!.(MISSING).80%!.(MISSING).90%!.(MISSING).100%!
+(MISSING)}
+I1212 11:41:54.660342   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe list hostonlyifs
+I1212 11:41:54.801066   19548 main.go:134] libmachine: STDOUT:
+{
+Name:            VirtualBox Host-Only Ethernet Adapter
+GUID:            e6c82392-8a6f-4ef4-baa0-61a8ed38e2d7
+DHCP:            Disabled
+IPAddress:       192.168.56.1
+NetworkMask:     255.255.255.0
+IPV6Address:     fe80::c2b6:2d2a:d1f4:82cf
+IPV6NetworkMaskPrefixLength: 64
+HardwareAddress: 0a:00:27:00:00:18
+MediumType:      Ethernet
+Wireless:        No
+Status:          Up
+VBoxNetworkName: HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter
+
+Name:            VirtualBox Host-Only Ethernet Adapter #2
+GUID:            fa03a698-bbd3-408d-9234-7ee55e3f65c0
+DHCP:            Disabled
+IPAddress:       192.168.129.1
+NetworkMask:     255.255.255.0
+IPV6Address:     fe80::3ed6:114d:3c99:a69
+IPV6NetworkMaskPrefixLength: 64
+HardwareAddress: 0a:00:27:00:00:45
+MediumType:      Ethernet
+Wireless:        No
+Status:          Up
+VBoxNetworkName: HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter #2
+
+}
+I1212 11:41:54.803438   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:41:54.803438   19548 main.go:134] libmachine: Found a new host-only adapter: "VirtualBox Host-Only Ethernet Adapter #2"
+I1212 11:41:54.803988   19548 main.go:134] libmachine: Windows might ask for the permission to configure a network adapter. Sometimes, such confirmation window is minimized in the taskbar.
+I1212 11:41:54.803988   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe hostonlyif ipconfig VirtualBox Host-Only Ethernet Adapter #2 --ip 192.168.59.1 --netmask 255.255.255.0
+I1212 11:41:58.724894   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:41:58.724894   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:41:58.724894   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe list dhcpservers
+I1212 11:41:58.803275   19548 main.go:134] libmachine: STDOUT:
+{
+NetworkName:    HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter
+Dhcpd IP:       192.168.56.100
+LowerIPAddress: 192.168.56.101
+UpperIPAddress: 192.168.56.254
+NetworkMask:    255.255.255.0
+Enabled:        Yes
+Global Configuration:
+    minLeaseTime:     default
+    defaultLeaseTime: default
+    maxLeaseTime:     default
+    Forced options:   None
+    Suppressed opts.: None
+        1/legacy: 255.255.255.0
+Groups:               None
+Individual Configs:   None
+}
+I1212 11:41:58.803790   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:41:58.803949   19548 main.go:134] libmachine: Removing orphan DHCP servers...
+I1212 11:41:58.803949   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe list hostonlyifs
+I1212 11:41:58.959953   19548 main.go:134] libmachine: STDOUT:
+{
+Name:            VirtualBox Host-Only Ethernet Adapter
+GUID:            e6c82392-8a6f-4ef4-baa0-61a8ed38e2d7
+DHCP:            Disabled
+IPAddress:       192.168.56.1
+NetworkMask:     255.255.255.0
+IPV6Address:     fe80::c2b6:2d2a:d1f4:82cf
+IPV6NetworkMaskPrefixLength: 64
+HardwareAddress: 0a:00:27:00:00:18
+MediumType:      Ethernet
+Wireless:        No
+Status:          Up
+VBoxNetworkName: HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter
+
+Name:            VirtualBox Host-Only Ethernet Adapter #2
+GUID:            fa03a698-bbd3-408d-9234-7ee55e3f65c0
+DHCP:            Disabled
+IPAddress:       192.168.59.1
+NetworkMask:     255.255.255.0
+IPV6Address:     fe80::3ed6:114d:3c99:a69
+IPV6NetworkMaskPrefixLength: 64
+HardwareAddress: 0a:00:27:00:00:45
+MediumType:      Ethernet
+Wireless:        No
+Status:          Up
+VBoxNetworkName: HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter #2
+
+}
+I1212 11:41:58.959953   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:41:58.959953   19548 main.go:134] libmachine: Adding/Modifying DHCP server "192.168.59.6" with address range "192.168.59.100" - "192.168.59.254"...
+I1212 11:41:58.959953   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe list dhcpservers
+I1212 11:41:59.020815   19548 main.go:134] libmachine: STDOUT:
+{
+NetworkName:    HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter
+Dhcpd IP:       192.168.56.100
+LowerIPAddress: 192.168.56.101
+UpperIPAddress: 192.168.56.254
+NetworkMask:    255.255.255.0
+Enabled:        Yes
+Global Configuration:
+    minLeaseTime:     default
+    defaultLeaseTime: default
+    maxLeaseTime:     default
+    Forced options:   None
+    Suppressed opts.: None
+        1/legacy: 255.255.255.0
+Groups:               None
+Individual Configs:   None
+}
+I1212 11:41:59.020815   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:41:59.020815   19548 main.go:134] libmachine: Windows might ask for the permission to configure a dhcp server. Sometimes, such confirmation window is minimized in the taskbar.
+I1212 11:41:59.020815   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe dhcpserver add --netname HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter #2 --ip 192.168.59.6 --netmask 255.255.255.0 --lowerip 192.168.59.100 --upperip 192.168.59.254 --enable
+I1212 11:41:59.082570   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:41:59.082570   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:41:59.082570   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe modifyvm minikube --nic2 hostonly --nictype2 virtio --nicpromisc2 deny --hostonlyadapter2 VirtualBox Host-Only Ethernet Adapter #2 --cableconnected2 on
+I1212 11:41:59.143931   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:41:59.143931   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:41:59.145041   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe modifyvm minikube --natpf1 delete ssh
+I1212 11:41:59.206138   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:41:59.206138   19548 main.go:134] libmachine: STDERR:
+{
+VBoxManage.exe: error: Code E_INVALIDARG (0x80070057) - One or more arguments are invalid (extended info not available)
+VBoxManage.exe: error: Context: "RemoveRedirect(Bstr(ValueUnion.psz).raw())" at line 1920 of file VBoxManageModifyVM.cpp
+}
+I1212 11:41:59.206138   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe modifyvm minikube --natpf1 ssh,tcp,127.0.0.1,61982,,22
+I1212 11:41:59.267041   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:41:59.267041   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:41:59.267041   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe startvm minikube --type headless
+I1212 11:42:07.088996   19548 main.go:134] libmachine: STDOUT:
+{
+Waiting for VM "minikube" to power on...
+VM "minikube" has been successfully started.
+}
+I1212 11:42:07.088996   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:42:07.088996   19548 main.go:134] libmachine: Waiting for an IP...
+I1212 11:42:07.088996   19548 main.go:134] libmachine: Getting to WaitForSSH function...
+I1212 11:42:07.095566   19548 main.go:134] libmachine: Using SSH client type: native
+I1212 11:42:07.101487   19548 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x12abd60] 0x12aece0 <nil>  [] 0s} 127.0.0.1 61982 <nil> <nil>}
+I1212 11:42:07.101487   19548 main.go:134] libmachine: About to run SSH command:
+exit 0
+I1212 11:43:02.138511   19548 main.go:134] libmachine: SSH cmd err, output: <nil>: 
+I1212 11:43:02.138511   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe showvminfo minikube --machinereadable
+I1212 11:43:02.224152   19548 main.go:134] libmachine: STDOUT:
+{
+name="minikube"
+groups="/"
+ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+UUID="d4c78b0a-7063-43f7-9cca-cbe93dcd10c9"
+CfgFile="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\minikube.vbox"
+SnapFldr="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\Snapshots"
+LogFldr="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\Logs"
+hardwareuuid="d4c78b0a-7063-43f7-9cca-cbe93dcd10c9"
+memory=2200
+pagefusion="off"
+vram=8
+cpuexecutioncap=100
+hpet="on"
+cpu-profile="host"
+chipset="piix3"
+firmware="BIOS"
+cpus=2
+pae="on"
+longmode="on"
+triplefaultreset="off"
+apic="on"
+x2apic="off"
+nested-hw-virt="off"
+cpuid-portability-level=0
+bootmenu="disabled"
+boot1="dvd"
+boot2="dvd"
+boot3="disk"
+boot4="none"
+acpi="on"
+ioapic="on"
+biosapic="apic"
+biossystemtimeoffset=0
+rtcuseutc="on"
+hwvirtex="on"
+nestedpaging="on"
+largepages="on"
+vtxvpid="on"
+vtxux="on"
+paravirtprovider="default"
+effparavirtprovider="kvm"
+VMState="running"
+VMStateChangeTime="2022-12-12T09:42:07.075000000"
+graphicscontroller="vboxvga"
+monitorcount=1
+accelerate3d="off"
+accelerate2dvideo="off"
+teleporterenabled="off"
+teleporterport=0
+teleporteraddress=""
+teleporterpassword=""
+tracing-enabled="off"
+tracing-allow-vm-access="off"
+tracing-config=""
+autostart-enabled="off"
+autostart-delay=0
+defaultfrontend=""
+vmprocpriority="default"
+storagecontrollername0="SATA"
+storagecontrollertype0="IntelAhci"
+storagecontrollerinstance0="0"
+storagecontrollermaxportcount0="30"
+storagecontrollerportcount0="30"
+storagecontrollerbootable0="on"
+"SATA-0-0"="C:\Users\LENOVO\.minikube\machines\minikube\boot2docker.iso"
+"SATA-ImageUUID-0-0"="4a398463-4403-4371-bfca-112fbb86962e"
+"SATA-tempeject"="off"
+"SATA-IsEjected"="off"
+"SATA-1-0"="C:\Users\LENOVO\.minikube\machines\minikube\disk.vmdk"
+"SATA-ImageUUID-1-0"="f0debdad-478f-4e16-8540-259322e8fe22"
+"SATA-2-0"="none"
+"SATA-3-0"="none"
+"SATA-4-0"="none"
+"SATA-5-0"="none"
+"SATA-6-0"="none"
+"SATA-7-0"="none"
+"SATA-8-0"="none"
+"SATA-9-0"="none"
+"SATA-10-0"="none"
+"SATA-11-0"="none"
+"SATA-12-0"="none"
+"SATA-13-0"="none"
+"SATA-14-0"="none"
+"SATA-15-0"="none"
+"SATA-16-0"="none"
+"SATA-17-0"="none"
+"SATA-18-0"="none"
+"SATA-19-0"="none"
+"SATA-20-0"="none"
+"SATA-21-0"="none"
+"SATA-22-0"="none"
+"SATA-23-0"="none"
+"SATA-24-0"="none"
+"SATA-25-0"="none"
+"SATA-26-0"="none"
+"SATA-27-0"="none"
+"SATA-28-0"="none"
+"SATA-29-0"="none"
+natnet1="nat"
+macaddress1="0800270C89E6"
+cableconnected1="on"
+nic1="nat"
+nictype1="virtio"
+nicspeed1="0"
+mtu="0"
+sockSnd="64"
+sockRcv="64"
+tcpWndSnd="64"
+tcpWndRcv="64"
+Forwarding(0)="ssh,tcp,127.0.0.1,61982,,22"
+hostonlyadapter2="VirtualBox Host-Only Ethernet Adapter #2"
+macaddress2="08002732AB96"
+cableconnected2="on"
+nic2="hostonly"
+nictype2="virtio"
+nicspeed2="0"
+nic3="none"
+nic4="none"
+nic5="none"
+nic6="none"
+nic7="none"
+nic8="none"
+hidpointing="ps2mouse"
+hidkeyboard="ps2kbd"
+uart1="off"
+uart2="off"
+uart3="off"
+uart4="off"
+lpt1="off"
+lpt2="off"
+audio="dsound"
+audio_out="off"
+audio_in="off"
+clipboard="disabled"
+draganddrop="disabled"
+SessionName="headless"
+VideoMode="720,400,0"@0,0 1
+vrde="off"
+usb="off"
+ehci="off"
+xhci="off"
+SharedFolderNameMachineMapping1="c/Users"
+SharedFolderPathMachineMapping1="\\\\?\\c:\\Users"
+VRDEActiveConnection="off"
+VRDEClients==0
+videocap="off"
+videocapaudio="off"
+capturescreens=""
+capturefilename="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\minikube.webm"
+captureres="1024x768"
+capturevideorate=512
+capturevideofps=25
+captureopts=""
+GuestMemoryBalloon=0
+GuestOSType="Linux26_64"
+GuestAdditionsRunLevel=2
+GuestAdditionsVersion="6.0.0 r127566"
+GuestAdditionsFacility_VirtualBox Base Driver=50,1670838175038
+GuestAdditionsFacility_VirtualBox System Service=50,1670838176273
+GuestAdditionsFacility_Seamless Mode=0,1670838175037
+GuestAdditionsFacility_Graphics Mode=0,1670838175036
+}
+I1212 11:43:02.224152   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:43:02.224724   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe showvminfo minikube --machinereadable
+I1212 11:43:02.288880   19548 main.go:134] libmachine: STDOUT:
+{
+name="minikube"
+groups="/"
+ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+UUID="d4c78b0a-7063-43f7-9cca-cbe93dcd10c9"
+CfgFile="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\minikube.vbox"
+SnapFldr="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\Snapshots"
+LogFldr="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\Logs"
+hardwareuuid="d4c78b0a-7063-43f7-9cca-cbe93dcd10c9"
+memory=2200
+pagefusion="off"
+vram=8
+cpuexecutioncap=100
+hpet="on"
+cpu-profile="host"
+chipset="piix3"
+firmware="BIOS"
+cpus=2
+pae="on"
+longmode="on"
+triplefaultreset="off"
+apic="on"
+x2apic="off"
+nested-hw-virt="off"
+cpuid-portability-level=0
+bootmenu="disabled"
+boot1="dvd"
+boot2="dvd"
+boot3="disk"
+boot4="none"
+acpi="on"
+ioapic="on"
+biosapic="apic"
+biossystemtimeoffset=0
+rtcuseutc="on"
+hwvirtex="on"
+nestedpaging="on"
+largepages="on"
+vtxvpid="on"
+vtxux="on"
+paravirtprovider="default"
+effparavirtprovider="kvm"
+VMState="running"
+VMStateChangeTime="2022-12-12T09:42:07.075000000"
+graphicscontroller="vboxvga"
+monitorcount=1
+accelerate3d="off"
+accelerate2dvideo="off"
+teleporterenabled="off"
+teleporterport=0
+teleporteraddress=""
+teleporterpassword=""
+tracing-enabled="off"
+tracing-allow-vm-access="off"
+tracing-config=""
+autostart-enabled="off"
+autostart-delay=0
+defaultfrontend=""
+vmprocpriority="default"
+storagecontrollername0="SATA"
+storagecontrollertype0="IntelAhci"
+storagecontrollerinstance0="0"
+storagecontrollermaxportcount0="30"
+storagecontrollerportcount0="30"
+storagecontrollerbootable0="on"
+"SATA-0-0"="C:\Users\LENOVO\.minikube\machines\minikube\boot2docker.iso"
+"SATA-ImageUUID-0-0"="4a398463-4403-4371-bfca-112fbb86962e"
+"SATA-tempeject"="off"
+"SATA-IsEjected"="off"
+"SATA-1-0"="C:\Users\LENOVO\.minikube\machines\minikube\disk.vmdk"
+"SATA-ImageUUID-1-0"="f0debdad-478f-4e16-8540-259322e8fe22"
+"SATA-2-0"="none"
+"SATA-3-0"="none"
+"SATA-4-0"="none"
+"SATA-5-0"="none"
+"SATA-6-0"="none"
+"SATA-7-0"="none"
+"SATA-8-0"="none"
+"SATA-9-0"="none"
+"SATA-10-0"="none"
+"SATA-11-0"="none"
+"SATA-12-0"="none"
+"SATA-13-0"="none"
+"SATA-14-0"="none"
+"SATA-15-0"="none"
+"SATA-16-0"="none"
+"SATA-17-0"="none"
+"SATA-18-0"="none"
+"SATA-19-0"="none"
+"SATA-20-0"="none"
+"SATA-21-0"="none"
+"SATA-22-0"="none"
+"SATA-23-0"="none"
+"SATA-24-0"="none"
+"SATA-25-0"="none"
+"SATA-26-0"="none"
+"SATA-27-0"="none"
+"SATA-28-0"="none"
+"SATA-29-0"="none"
+natnet1="nat"
+macaddress1="0800270C89E6"
+cableconnected1="on"
+nic1="nat"
+nictype1="virtio"
+nicspeed1="0"
+mtu="0"
+sockSnd="64"
+sockRcv="64"
+tcpWndSnd="64"
+tcpWndRcv="64"
+Forwarding(0)="ssh,tcp,127.0.0.1,61982,,22"
+hostonlyadapter2="VirtualBox Host-Only Ethernet Adapter #2"
+macaddress2="08002732AB96"
+cableconnected2="on"
+nic2="hostonly"
+nictype2="virtio"
+nicspeed2="0"
+nic3="none"
+nic4="none"
+nic5="none"
+nic6="none"
+nic7="none"
+nic8="none"
+hidpointing="ps2mouse"
+hidkeyboard="ps2kbd"
+uart1="off"
+uart2="off"
+uart3="off"
+uart4="off"
+lpt1="off"
+lpt2="off"
+audio="dsound"
+audio_out="off"
+audio_in="off"
+clipboard="disabled"
+draganddrop="disabled"
+SessionName="headless"
+VideoMode="720,400,0"@0,0 1
+vrde="off"
+usb="off"
+ehci="off"
+xhci="off"
+SharedFolderNameMachineMapping1="c/Users"
+SharedFolderPathMachineMapping1="\\\\?\\c:\\Users"
+VRDEActiveConnection="off"
+VRDEClients==0
+videocap="off"
+videocapaudio="off"
+capturescreens=""
+capturefilename="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\minikube.webm"
+captureres="1024x768"
+capturevideorate=512
+capturevideofps=25
+captureopts=""
+GuestMemoryBalloon=0
+GuestOSType="Linux26_64"
+GuestAdditionsRunLevel=2
+GuestAdditionsVersion="6.0.0 r127566"
+GuestAdditionsFacility_VirtualBox Base Driver=50,1670838175038
+GuestAdditionsFacility_VirtualBox System Service=50,1670838176273
+GuestAdditionsFacility_Seamless Mode=0,1670838175037
+GuestAdditionsFacility_Graphics Mode=0,1670838175036
+}
+I1212 11:43:02.288880   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:43:02.288880   19548 main.go:134] libmachine: Host-only MAC: 08002732ab96
+
+I1212 11:43:02.294601   19548 main.go:134] libmachine: Using SSH client type: native
+I1212 11:43:02.294601   19548 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x12abd60] 0x12aece0 <nil>  [] 0s} 127.0.0.1 61982 <nil> <nil>}
+I1212 11:43:02.294601   19548 main.go:134] libmachine: About to run SSH command:
+ip addr show
+I1212 11:43:02.426568   19548 main.go:134] libmachine: SSH cmd err, output: <nil>: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:0c:89:e6 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic eth0
+       valid_lft 86394sec preferred_lft 86394sec
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:32:ab:96 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.59.100/24 brd 192.168.59.255 scope global dynamic eth1
+       valid_lft 594sec preferred_lft 594sec
+4: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+
+I1212 11:43:02.426568   19548 main.go:134] libmachine: SSH returned: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:0c:89:e6 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic eth0
+       valid_lft 86394sec preferred_lft 86394sec
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:32:ab:96 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.59.100/24 brd 192.168.59.255 scope global dynamic eth1
+       valid_lft 594sec preferred_lft 594sec
+4: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+
+END SSH
+
+I1212 11:43:02.426568   19548 main.go:134] libmachine: IP is 192.168.59.100
+I1212 11:43:02.426568   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe showvminfo minikube --machinereadable
+I1212 11:43:02.493464   19548 main.go:134] libmachine: STDOUT:
+{
+name="minikube"
+groups="/"
+ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+UUID="d4c78b0a-7063-43f7-9cca-cbe93dcd10c9"
+CfgFile="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\minikube.vbox"
+SnapFldr="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\Snapshots"
+LogFldr="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\Logs"
+hardwareuuid="d4c78b0a-7063-43f7-9cca-cbe93dcd10c9"
+memory=2200
+pagefusion="off"
+vram=8
+cpuexecutioncap=100
+hpet="on"
+cpu-profile="host"
+chipset="piix3"
+firmware="BIOS"
+cpus=2
+pae="on"
+longmode="on"
+triplefaultreset="off"
+apic="on"
+x2apic="off"
+nested-hw-virt="off"
+cpuid-portability-level=0
+bootmenu="disabled"
+boot1="dvd"
+boot2="dvd"
+boot3="disk"
+boot4="none"
+acpi="on"
+ioapic="on"
+biosapic="apic"
+biossystemtimeoffset=0
+rtcuseutc="on"
+hwvirtex="on"
+nestedpaging="on"
+largepages="on"
+vtxvpid="on"
+vtxux="on"
+paravirtprovider="default"
+effparavirtprovider="kvm"
+VMState="running"
+VMStateChangeTime="2022-12-12T09:42:07.075000000"
+graphicscontroller="vboxvga"
+monitorcount=1
+accelerate3d="off"
+accelerate2dvideo="off"
+teleporterenabled="off"
+teleporterport=0
+teleporteraddress=""
+teleporterpassword=""
+tracing-enabled="off"
+tracing-allow-vm-access="off"
+tracing-config=""
+autostart-enabled="off"
+autostart-delay=0
+defaultfrontend=""
+vmprocpriority="default"
+storagecontrollername0="SATA"
+storagecontrollertype0="IntelAhci"
+storagecontrollerinstance0="0"
+storagecontrollermaxportcount0="30"
+storagecontrollerportcount0="30"
+storagecontrollerbootable0="on"
+"SATA-0-0"="C:\Users\LENOVO\.minikube\machines\minikube\boot2docker.iso"
+"SATA-ImageUUID-0-0"="4a398463-4403-4371-bfca-112fbb86962e"
+"SATA-tempeject"="off"
+"SATA-IsEjected"="off"
+"SATA-1-0"="C:\Users\LENOVO\.minikube\machines\minikube\disk.vmdk"
+"SATA-ImageUUID-1-0"="f0debdad-478f-4e16-8540-259322e8fe22"
+"SATA-2-0"="none"
+"SATA-3-0"="none"
+"SATA-4-0"="none"
+"SATA-5-0"="none"
+"SATA-6-0"="none"
+"SATA-7-0"="none"
+"SATA-8-0"="none"
+"SATA-9-0"="none"
+"SATA-10-0"="none"
+"SATA-11-0"="none"
+"SATA-12-0"="none"
+"SATA-13-0"="none"
+"SATA-14-0"="none"
+"SATA-15-0"="none"
+"SATA-16-0"="none"
+"SATA-17-0"="none"
+"SATA-18-0"="none"
+"SATA-19-0"="none"
+"SATA-20-0"="none"
+"SATA-21-0"="none"
+"SATA-22-0"="none"
+"SATA-23-0"="none"
+"SATA-24-0"="none"
+"SATA-25-0"="none"
+"SATA-26-0"="none"
+"SATA-27-0"="none"
+"SATA-28-0"="none"
+"SATA-29-0"="none"
+natnet1="nat"
+macaddress1="0800270C89E6"
+cableconnected1="on"
+nic1="nat"
+nictype1="virtio"
+nicspeed1="0"
+mtu="0"
+sockSnd="64"
+sockRcv="64"
+tcpWndSnd="64"
+tcpWndRcv="64"
+Forwarding(0)="ssh,tcp,127.0.0.1,61982,,22"
+hostonlyadapter2="VirtualBox Host-Only Ethernet Adapter #2"
+macaddress2="08002732AB96"
+cableconnected2="on"
+nic2="hostonly"
+nictype2="virtio"
+nicspeed2="0"
+nic3="none"
+nic4="none"
+nic5="none"
+nic6="none"
+nic7="none"
+nic8="none"
+hidpointing="ps2mouse"
+hidkeyboard="ps2kbd"
+uart1="off"
+uart2="off"
+uart3="off"
+uart4="off"
+lpt1="off"
+lpt2="off"
+audio="dsound"
+audio_out="off"
+audio_in="off"
+clipboard="disabled"
+draganddrop="disabled"
+SessionName="headless"
+VideoMode="720,400,0"@0,0 1
+vrde="off"
+usb="off"
+ehci="off"
+xhci="off"
+SharedFolderNameMachineMapping1="c/Users"
+SharedFolderPathMachineMapping1="\\\\?\\c:\\Users"
+VRDEActiveConnection="off"
+VRDEClients==0
+videocap="off"
+videocapaudio="off"
+capturescreens=""
+capturefilename="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\minikube.webm"
+captureres="1024x768"
+capturevideorate=512
+capturevideofps=25
+captureopts=""
+GuestMemoryBalloon=0
+GuestOSType="Linux26_64"
+GuestAdditionsRunLevel=2
+GuestAdditionsVersion="6.0.0 r127566"
+GuestAdditionsFacility_VirtualBox Base Driver=50,1670838175038
+GuestAdditionsFacility_VirtualBox System Service=50,1670838176273
+GuestAdditionsFacility_Seamless Mode=0,1670838175037
+GuestAdditionsFacility_Graphics Mode=0,1670838175036
+}
+I1212 11:43:02.493464   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:43:02.493464   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe showvminfo minikube --machinereadable
+I1212 11:43:02.560590   19548 main.go:134] libmachine: STDOUT:
+{
+name="minikube"
+groups="/"
+ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+UUID="d4c78b0a-7063-43f7-9cca-cbe93dcd10c9"
+CfgFile="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\minikube.vbox"
+SnapFldr="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\Snapshots"
+LogFldr="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\Logs"
+hardwareuuid="d4c78b0a-7063-43f7-9cca-cbe93dcd10c9"
+memory=2200
+pagefusion="off"
+vram=8
+cpuexecutioncap=100
+hpet="on"
+cpu-profile="host"
+chipset="piix3"
+firmware="BIOS"
+cpus=2
+pae="on"
+longmode="on"
+triplefaultreset="off"
+apic="on"
+x2apic="off"
+nested-hw-virt="off"
+cpuid-portability-level=0
+bootmenu="disabled"
+boot1="dvd"
+boot2="dvd"
+boot3="disk"
+boot4="none"
+acpi="on"
+ioapic="on"
+biosapic="apic"
+biossystemtimeoffset=0
+rtcuseutc="on"
+hwvirtex="on"
+nestedpaging="on"
+largepages="on"
+vtxvpid="on"
+vtxux="on"
+paravirtprovider="default"
+effparavirtprovider="kvm"
+VMState="running"
+VMStateChangeTime="2022-12-12T09:42:07.075000000"
+graphicscontroller="vboxvga"
+monitorcount=1
+accelerate3d="off"
+accelerate2dvideo="off"
+teleporterenabled="off"
+teleporterport=0
+teleporteraddress=""
+teleporterpassword=""
+tracing-enabled="off"
+tracing-allow-vm-access="off"
+tracing-config=""
+autostart-enabled="off"
+autostart-delay=0
+defaultfrontend=""
+vmprocpriority="default"
+storagecontrollername0="SATA"
+storagecontrollertype0="IntelAhci"
+storagecontrollerinstance0="0"
+storagecontrollermaxportcount0="30"
+storagecontrollerportcount0="30"
+storagecontrollerbootable0="on"
+"SATA-0-0"="C:\Users\LENOVO\.minikube\machines\minikube\boot2docker.iso"
+"SATA-ImageUUID-0-0"="4a398463-4403-4371-bfca-112fbb86962e"
+"SATA-tempeject"="off"
+"SATA-IsEjected"="off"
+"SATA-1-0"="C:\Users\LENOVO\.minikube\machines\minikube\disk.vmdk"
+"SATA-ImageUUID-1-0"="f0debdad-478f-4e16-8540-259322e8fe22"
+"SATA-2-0"="none"
+"SATA-3-0"="none"
+"SATA-4-0"="none"
+"SATA-5-0"="none"
+"SATA-6-0"="none"
+"SATA-7-0"="none"
+"SATA-8-0"="none"
+"SATA-9-0"="none"
+"SATA-10-0"="none"
+"SATA-11-0"="none"
+"SATA-12-0"="none"
+"SATA-13-0"="none"
+"SATA-14-0"="none"
+"SATA-15-0"="none"
+"SATA-16-0"="none"
+"SATA-17-0"="none"
+"SATA-18-0"="none"
+"SATA-19-0"="none"
+"SATA-20-0"="none"
+"SATA-21-0"="none"
+"SATA-22-0"="none"
+"SATA-23-0"="none"
+"SATA-24-0"="none"
+"SATA-25-0"="none"
+"SATA-26-0"="none"
+"SATA-27-0"="none"
+"SATA-28-0"="none"
+"SATA-29-0"="none"
+natnet1="nat"
+macaddress1="0800270C89E6"
+cableconnected1="on"
+nic1="nat"
+nictype1="virtio"
+nicspeed1="0"
+mtu="0"
+sockSnd="64"
+sockRcv="64"
+tcpWndSnd="64"
+tcpWndRcv="64"
+Forwarding(0)="ssh,tcp,127.0.0.1,61982,,22"
+hostonlyadapter2="VirtualBox Host-Only Ethernet Adapter #2"
+macaddress2="08002732AB96"
+cableconnected2="on"
+nic2="hostonly"
+nictype2="virtio"
+nicspeed2="0"
+nic3="none"
+nic4="none"
+nic5="none"
+nic6="none"
+nic7="none"
+nic8="none"
+hidpointing="ps2mouse"
+hidkeyboard="ps2kbd"
+uart1="off"
+uart2="off"
+uart3="off"
+uart4="off"
+lpt1="off"
+lpt2="off"
+audio="dsound"
+audio_out="off"
+audio_in="off"
+clipboard="disabled"
+draganddrop="disabled"
+SessionName="headless"
+VideoMode="720,400,0"@0,0 1
+vrde="off"
+usb="off"
+ehci="off"
+xhci="off"
+SharedFolderNameMachineMapping1="c/Users"
+SharedFolderPathMachineMapping1="\\\\?\\c:\\Users"
+VRDEActiveConnection="off"
+VRDEClients==0
+videocap="off"
+videocapaudio="off"
+capturescreens=""
+capturefilename="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\minikube.webm"
+captureres="1024x768"
+capturevideorate=512
+capturevideofps=25
+captureopts=""
+GuestMemoryBalloon=0
+GuestOSType="Linux26_64"
+GuestAdditionsRunLevel=2
+GuestAdditionsVersion="6.0.0 r127566"
+GuestAdditionsFacility_VirtualBox Base Driver=50,1670838175038
+GuestAdditionsFacility_VirtualBox System Service=50,1670838176273
+GuestAdditionsFacility_Seamless Mode=0,1670838175037
+GuestAdditionsFacility_Graphics Mode=0,1670838175036
+}
+I1212 11:43:02.560590   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:43:02.560590   19548 main.go:134] libmachine: Host-only MAC: 08002732ab96
+
+I1212 11:43:02.571697   19548 main.go:134] libmachine: Using SSH client type: native
+I1212 11:43:02.572244   19548 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x12abd60] 0x12aece0 <nil>  [] 0s} 127.0.0.1 61982 <nil> <nil>}
+I1212 11:43:02.572244   19548 main.go:134] libmachine: About to run SSH command:
+ip addr show
+I1212 11:43:02.700147   19548 main.go:134] libmachine: SSH cmd err, output: <nil>: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:0c:89:e6 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic eth0
+       valid_lft 86393sec preferred_lft 86393sec
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:32:ab:96 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.59.100/24 brd 192.168.59.255 scope global dynamic eth1
+       valid_lft 594sec preferred_lft 594sec
+4: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+
+I1212 11:43:02.700147   19548 main.go:134] libmachine: SSH returned: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:0c:89:e6 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic eth0
+       valid_lft 86393sec preferred_lft 86393sec
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:32:ab:96 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.59.100/24 brd 192.168.59.255 scope global dynamic eth1
+       valid_lft 594sec preferred_lft 594sec
+4: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+
+END SSH
+
+I1212 11:43:02.700147   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe list hostonlyifs
+I1212 11:43:02.863804   19548 main.go:134] libmachine: STDOUT:
+{
+Name:            VirtualBox Host-Only Ethernet Adapter
+GUID:            e6c82392-8a6f-4ef4-baa0-61a8ed38e2d7
+DHCP:            Disabled
+IPAddress:       192.168.56.1
+NetworkMask:     255.255.255.0
+IPV6Address:     fe80::c2b6:2d2a:d1f4:82cf
+IPV6NetworkMaskPrefixLength: 64
+HardwareAddress: 0a:00:27:00:00:18
+MediumType:      Ethernet
+Wireless:        No
+Status:          Up
+VBoxNetworkName: HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter
+
+Name:            VirtualBox Host-Only Ethernet Adapter #2
+GUID:            fa03a698-bbd3-408d-9234-7ee55e3f65c0
+DHCP:            Disabled
+IPAddress:       192.168.59.1
+NetworkMask:     255.255.255.0
+IPV6Address:     fe80::3ed6:114d:3c99:a69
+IPV6NetworkMaskPrefixLength: 64
+HardwareAddress: 0a:00:27:00:00:45
+MediumType:      Ethernet
+Wireless:        No
+Status:          Up
+VBoxNetworkName: HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter #2
+
+}
+I1212 11:43:02.863804   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:43:02.976432   19548 main.go:134] libmachine: Found: VirtualBox Host-Only Ethernet Adapter #2
+I1212 11:43:02.976972   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe showvminfo minikube --machinereadable
+I1212 11:43:03.044814   19548 main.go:134] libmachine: STDOUT:
+{
+name="minikube"
+groups="/"
+ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+UUID="d4c78b0a-7063-43f7-9cca-cbe93dcd10c9"
+CfgFile="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\minikube.vbox"
+SnapFldr="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\Snapshots"
+LogFldr="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\Logs"
+hardwareuuid="d4c78b0a-7063-43f7-9cca-cbe93dcd10c9"
+memory=2200
+pagefusion="off"
+vram=8
+cpuexecutioncap=100
+hpet="on"
+cpu-profile="host"
+chipset="piix3"
+firmware="BIOS"
+cpus=2
+pae="on"
+longmode="on"
+triplefaultreset="off"
+apic="on"
+x2apic="off"
+nested-hw-virt="off"
+cpuid-portability-level=0
+bootmenu="disabled"
+boot1="dvd"
+boot2="dvd"
+boot3="disk"
+boot4="none"
+acpi="on"
+ioapic="on"
+biosapic="apic"
+biossystemtimeoffset=0
+rtcuseutc="on"
+hwvirtex="on"
+nestedpaging="on"
+largepages="on"
+vtxvpid="on"
+vtxux="on"
+paravirtprovider="default"
+effparavirtprovider="kvm"
+VMState="running"
+VMStateChangeTime="2022-12-12T09:42:07.075000000"
+graphicscontroller="vboxvga"
+monitorcount=1
+accelerate3d="off"
+accelerate2dvideo="off"
+teleporterenabled="off"
+teleporterport=0
+teleporteraddress=""
+teleporterpassword=""
+tracing-enabled="off"
+tracing-allow-vm-access="off"
+tracing-config=""
+autostart-enabled="off"
+autostart-delay=0
+defaultfrontend=""
+vmprocpriority="default"
+storagecontrollername0="SATA"
+storagecontrollertype0="IntelAhci"
+storagecontrollerinstance0="0"
+storagecontrollermaxportcount0="30"
+storagecontrollerportcount0="30"
+storagecontrollerbootable0="on"
+"SATA-0-0"="C:\Users\LENOVO\.minikube\machines\minikube\boot2docker.iso"
+"SATA-ImageUUID-0-0"="4a398463-4403-4371-bfca-112fbb86962e"
+"SATA-tempeject"="off"
+"SATA-IsEjected"="off"
+"SATA-1-0"="C:\Users\LENOVO\.minikube\machines\minikube\disk.vmdk"
+"SATA-ImageUUID-1-0"="f0debdad-478f-4e16-8540-259322e8fe22"
+"SATA-2-0"="none"
+"SATA-3-0"="none"
+"SATA-4-0"="none"
+"SATA-5-0"="none"
+"SATA-6-0"="none"
+"SATA-7-0"="none"
+"SATA-8-0"="none"
+"SATA-9-0"="none"
+"SATA-10-0"="none"
+"SATA-11-0"="none"
+"SATA-12-0"="none"
+"SATA-13-0"="none"
+"SATA-14-0"="none"
+"SATA-15-0"="none"
+"SATA-16-0"="none"
+"SATA-17-0"="none"
+"SATA-18-0"="none"
+"SATA-19-0"="none"
+"SATA-20-0"="none"
+"SATA-21-0"="none"
+"SATA-22-0"="none"
+"SATA-23-0"="none"
+"SATA-24-0"="none"
+"SATA-25-0"="none"
+"SATA-26-0"="none"
+"SATA-27-0"="none"
+"SATA-28-0"="none"
+"SATA-29-0"="none"
+natnet1="nat"
+macaddress1="0800270C89E6"
+cableconnected1="on"
+nic1="nat"
+nictype1="virtio"
+nicspeed1="0"
+mtu="0"
+sockSnd="64"
+sockRcv="64"
+tcpWndSnd="64"
+tcpWndRcv="64"
+Forwarding(0)="ssh,tcp,127.0.0.1,61982,,22"
+hostonlyadapter2="VirtualBox Host-Only Ethernet Adapter #2"
+macaddress2="08002732AB96"
+cableconnected2="on"
+nic2="hostonly"
+nictype2="virtio"
+nicspeed2="0"
+nic3="none"
+nic4="none"
+nic5="none"
+nic6="none"
+nic7="none"
+nic8="none"
+hidpointing="ps2mouse"
+hidkeyboard="ps2kbd"
+uart1="off"
+uart2="off"
+uart3="off"
+uart4="off"
+lpt1="off"
+lpt2="off"
+audio="dsound"
+audio_out="off"
+audio_in="off"
+clipboard="disabled"
+draganddrop="disabled"
+SessionName="headless"
+VideoMode="720,400,0"@0,0 1
+vrde="off"
+usb="off"
+ehci="off"
+xhci="off"
+SharedFolderNameMachineMapping1="c/Users"
+SharedFolderPathMachineMapping1="\\\\?\\c:\\Users"
+VRDEActiveConnection="off"
+VRDEClients==0
+videocap="off"
+videocapaudio="off"
+capturescreens=""
+capturefilename="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\minikube.webm"
+captureres="1024x768"
+capturevideorate=512
+capturevideofps=25
+captureopts=""
+GuestMemoryBalloon=0
+GuestOSType="Linux26_64"
+GuestAdditionsRunLevel=2
+GuestAdditionsVersion="6.0.0 r127566"
+GuestAdditionsFacility_VirtualBox Base Driver=50,1670838175038
+GuestAdditionsFacility_VirtualBox System Service=50,1670838176273
+GuestAdditionsFacility_Seamless Mode=0,1670838175037
+GuestAdditionsFacility_Graphics Mode=0,1670838175036
+}
+I1212 11:43:03.044814   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:43:03.044925   19548 machine.go:88] provisioning docker machine ...
+I1212 11:43:03.046008   19548 buildroot.go:166] provisioning hostname "minikube"
+I1212 11:43:03.051780   19548 main.go:134] libmachine: Using SSH client type: native
+I1212 11:43:03.052315   19548 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x12abd60] 0x12aece0 <nil>  [] 0s} 127.0.0.1 61982 <nil> <nil>}
+I1212 11:43:03.052315   19548 main.go:134] libmachine: About to run SSH command:
+sudo hostname minikube && echo "minikube" | sudo tee /etc/hostname
+I1212 11:43:03.301239   19548 main.go:134] libmachine: SSH cmd err, output: <nil>: minikube
+
+I1212 11:43:03.308713   19548 main.go:134] libmachine: Using SSH client type: native
+I1212 11:43:03.308713   19548 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x12abd60] 0x12aece0 <nil>  [] 0s} 127.0.0.1 61982 <nil> <nil>}
+I1212 11:43:03.308713   19548 main.go:134] libmachine: About to run SSH command:
+
+		if ! grep -xq '.*\sminikube' /etc/hosts; then
+			if grep -xq '127.0.1.1\s.*' /etc/hosts; then
+				sudo sed -i 's/^127.0.1.1\s.*/127.0.1.1 minikube/g' /etc/hosts;
+			else 
+				echo '127.0.1.1 minikube' | sudo tee -a /etc/hosts; 
+			fi
+		fi
+I1212 11:43:03.456010   19548 main.go:134] libmachine: SSH cmd err, output: <nil>: 
+I1212 11:43:03.456657   19548 buildroot.go:172] set auth options {CertDir:C:\Users\LENOVO\.minikube CaCertPath:C:\Users\LENOVO\.minikube\certs\ca.pem CaPrivateKeyPath:C:\Users\LENOVO\.minikube\certs\ca-key.pem CaCertRemotePath:/etc/docker/ca.pem ServerCertPath:C:\Users\LENOVO\.minikube\machines\server.pem ServerKeyPath:C:\Users\LENOVO\.minikube\machines\server-key.pem ClientKeyPath:C:\Users\LENOVO\.minikube\certs\key.pem ServerCertRemotePath:/etc/docker/server.pem ServerKeyRemotePath:/etc/docker/server-key.pem ClientCertPath:C:\Users\LENOVO\.minikube\certs\cert.pem ServerCertSANs:[] StorePath:C:\Users\LENOVO\.minikube}
+I1212 11:43:03.456657   19548 buildroot.go:174] setting up certificates
+I1212 11:43:03.457221   19548 provision.go:83] configureAuth start
+I1212 11:43:03.457221   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe showvminfo minikube --machinereadable
+I1212 11:43:03.533476   19548 main.go:134] libmachine: STDOUT:
+{
+name="minikube"
+groups="/"
+ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+UUID="d4c78b0a-7063-43f7-9cca-cbe93dcd10c9"
+CfgFile="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\minikube.vbox"
+SnapFldr="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\Snapshots"
+LogFldr="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\Logs"
+hardwareuuid="d4c78b0a-7063-43f7-9cca-cbe93dcd10c9"
+memory=2200
+pagefusion="off"
+vram=8
+cpuexecutioncap=100
+hpet="on"
+cpu-profile="host"
+chipset="piix3"
+firmware="BIOS"
+cpus=2
+pae="on"
+longmode="on"
+triplefaultreset="off"
+apic="on"
+x2apic="off"
+nested-hw-virt="off"
+cpuid-portability-level=0
+bootmenu="disabled"
+boot1="dvd"
+boot2="dvd"
+boot3="disk"
+boot4="none"
+acpi="on"
+ioapic="on"
+biosapic="apic"
+biossystemtimeoffset=0
+rtcuseutc="on"
+hwvirtex="on"
+nestedpaging="on"
+largepages="on"
+vtxvpid="on"
+vtxux="on"
+paravirtprovider="default"
+effparavirtprovider="kvm"
+VMState="running"
+VMStateChangeTime="2022-12-12T09:42:07.075000000"
+graphicscontroller="vboxvga"
+monitorcount=1
+accelerate3d="off"
+accelerate2dvideo="off"
+teleporterenabled="off"
+teleporterport=0
+teleporteraddress=""
+teleporterpassword=""
+tracing-enabled="off"
+tracing-allow-vm-access="off"
+tracing-config=""
+autostart-enabled="off"
+autostart-delay=0
+defaultfrontend=""
+vmprocpriority="default"
+storagecontrollername0="SATA"
+storagecontrollertype0="IntelAhci"
+storagecontrollerinstance0="0"
+storagecontrollermaxportcount0="30"
+storagecontrollerportcount0="30"
+storagecontrollerbootable0="on"
+"SATA-0-0"="C:\Users\LENOVO\.minikube\machines\minikube\boot2docker.iso"
+"SATA-ImageUUID-0-0"="4a398463-4403-4371-bfca-112fbb86962e"
+"SATA-tempeject"="off"
+"SATA-IsEjected"="off"
+"SATA-1-0"="C:\Users\LENOVO\.minikube\machines\minikube\disk.vmdk"
+"SATA-ImageUUID-1-0"="f0debdad-478f-4e16-8540-259322e8fe22"
+"SATA-2-0"="none"
+"SATA-3-0"="none"
+"SATA-4-0"="none"
+"SATA-5-0"="none"
+"SATA-6-0"="none"
+"SATA-7-0"="none"
+"SATA-8-0"="none"
+"SATA-9-0"="none"
+"SATA-10-0"="none"
+"SATA-11-0"="none"
+"SATA-12-0"="none"
+"SATA-13-0"="none"
+"SATA-14-0"="none"
+"SATA-15-0"="none"
+"SATA-16-0"="none"
+"SATA-17-0"="none"
+"SATA-18-0"="none"
+"SATA-19-0"="none"
+"SATA-20-0"="none"
+"SATA-21-0"="none"
+"SATA-22-0"="none"
+"SATA-23-0"="none"
+"SATA-24-0"="none"
+"SATA-25-0"="none"
+"SATA-26-0"="none"
+"SATA-27-0"="none"
+"SATA-28-0"="none"
+"SATA-29-0"="none"
+natnet1="nat"
+macaddress1="0800270C89E6"
+cableconnected1="on"
+nic1="nat"
+nictype1="virtio"
+nicspeed1="0"
+mtu="0"
+sockSnd="64"
+sockRcv="64"
+tcpWndSnd="64"
+tcpWndRcv="64"
+Forwarding(0)="ssh,tcp,127.0.0.1,61982,,22"
+hostonlyadapter2="VirtualBox Host-Only Ethernet Adapter #2"
+macaddress2="08002732AB96"
+cableconnected2="on"
+nic2="hostonly"
+nictype2="virtio"
+nicspeed2="0"
+nic3="none"
+nic4="none"
+nic5="none"
+nic6="none"
+nic7="none"
+nic8="none"
+hidpointing="ps2mouse"
+hidkeyboard="ps2kbd"
+uart1="off"
+uart2="off"
+uart3="off"
+uart4="off"
+lpt1="off"
+lpt2="off"
+audio="dsound"
+audio_out="off"
+audio_in="off"
+clipboard="disabled"
+draganddrop="disabled"
+SessionName="headless"
+VideoMode="720,400,0"@0,0 1
+vrde="off"
+usb="off"
+ehci="off"
+xhci="off"
+SharedFolderNameMachineMapping1="c/Users"
+SharedFolderPathMachineMapping1="\\\\?\\c:\\Users"
+VRDEActiveConnection="off"
+VRDEClients==0
+videocap="off"
+videocapaudio="off"
+capturescreens=""
+capturefilename="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\minikube.webm"
+captureres="1024x768"
+capturevideorate=512
+capturevideofps=25
+captureopts=""
+GuestMemoryBalloon=0
+GuestOSType="Linux26_64"
+GuestAdditionsRunLevel=2
+GuestAdditionsVersion="6.0.0 r127566"
+GuestAdditionsFacility_VirtualBox Base Driver=50,1670838175038
+GuestAdditionsFacility_VirtualBox System Service=50,1670838176273
+GuestAdditionsFacility_Seamless Mode=0,1670838175037
+GuestAdditionsFacility_Graphics Mode=0,1670838175036
+}
+I1212 11:43:03.533476   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:43:03.533476   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe showvminfo minikube --machinereadable
+I1212 11:43:03.610475   19548 main.go:134] libmachine: STDOUT:
+{
+name="minikube"
+groups="/"
+ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+UUID="d4c78b0a-7063-43f7-9cca-cbe93dcd10c9"
+CfgFile="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\minikube.vbox"
+SnapFldr="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\Snapshots"
+LogFldr="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\Logs"
+hardwareuuid="d4c78b0a-7063-43f7-9cca-cbe93dcd10c9"
+memory=2200
+pagefusion="off"
+vram=8
+cpuexecutioncap=100
+hpet="on"
+cpu-profile="host"
+chipset="piix3"
+firmware="BIOS"
+cpus=2
+pae="on"
+longmode="on"
+triplefaultreset="off"
+apic="on"
+x2apic="off"
+nested-hw-virt="off"
+cpuid-portability-level=0
+bootmenu="disabled"
+boot1="dvd"
+boot2="dvd"
+boot3="disk"
+boot4="none"
+acpi="on"
+ioapic="on"
+biosapic="apic"
+biossystemtimeoffset=0
+rtcuseutc="on"
+hwvirtex="on"
+nestedpaging="on"
+largepages="on"
+vtxvpid="on"
+vtxux="on"
+paravirtprovider="default"
+effparavirtprovider="kvm"
+VMState="running"
+VMStateChangeTime="2022-12-12T09:42:07.075000000"
+graphicscontroller="vboxvga"
+monitorcount=1
+accelerate3d="off"
+accelerate2dvideo="off"
+teleporterenabled="off"
+teleporterport=0
+teleporteraddress=""
+teleporterpassword=""
+tracing-enabled="off"
+tracing-allow-vm-access="off"
+tracing-config=""
+autostart-enabled="off"
+autostart-delay=0
+defaultfrontend=""
+vmprocpriority="default"
+storagecontrollername0="SATA"
+storagecontrollertype0="IntelAhci"
+storagecontrollerinstance0="0"
+storagecontrollermaxportcount0="30"
+storagecontrollerportcount0="30"
+storagecontrollerbootable0="on"
+"SATA-0-0"="C:\Users\LENOVO\.minikube\machines\minikube\boot2docker.iso"
+"SATA-ImageUUID-0-0"="4a398463-4403-4371-bfca-112fbb86962e"
+"SATA-tempeject"="off"
+"SATA-IsEjected"="off"
+"SATA-1-0"="C:\Users\LENOVO\.minikube\machines\minikube\disk.vmdk"
+"SATA-ImageUUID-1-0"="f0debdad-478f-4e16-8540-259322e8fe22"
+"SATA-2-0"="none"
+"SATA-3-0"="none"
+"SATA-4-0"="none"
+"SATA-5-0"="none"
+"SATA-6-0"="none"
+"SATA-7-0"="none"
+"SATA-8-0"="none"
+"SATA-9-0"="none"
+"SATA-10-0"="none"
+"SATA-11-0"="none"
+"SATA-12-0"="none"
+"SATA-13-0"="none"
+"SATA-14-0"="none"
+"SATA-15-0"="none"
+"SATA-16-0"="none"
+"SATA-17-0"="none"
+"SATA-18-0"="none"
+"SATA-19-0"="none"
+"SATA-20-0"="none"
+"SATA-21-0"="none"
+"SATA-22-0"="none"
+"SATA-23-0"="none"
+"SATA-24-0"="none"
+"SATA-25-0"="none"
+"SATA-26-0"="none"
+"SATA-27-0"="none"
+"SATA-28-0"="none"
+"SATA-29-0"="none"
+natnet1="nat"
+macaddress1="0800270C89E6"
+cableconnected1="on"
+nic1="nat"
+nictype1="virtio"
+nicspeed1="0"
+mtu="0"
+sockSnd="64"
+sockRcv="64"
+tcpWndSnd="64"
+tcpWndRcv="64"
+Forwarding(0)="ssh,tcp,127.0.0.1,61982,,22"
+hostonlyadapter2="VirtualBox Host-Only Ethernet Adapter #2"
+macaddress2="08002732AB96"
+cableconnected2="on"
+nic2="hostonly"
+nictype2="virtio"
+nicspeed2="0"
+nic3="none"
+nic4="none"
+nic5="none"
+nic6="none"
+nic7="none"
+nic8="none"
+hidpointing="ps2mouse"
+hidkeyboard="ps2kbd"
+uart1="off"
+uart2="off"
+uart3="off"
+uart4="off"
+lpt1="off"
+lpt2="off"
+audio="dsound"
+audio_out="off"
+audio_in="off"
+clipboard="disabled"
+draganddrop="disabled"
+SessionName="headless"
+VideoMode="720,400,0"@0,0 1
+vrde="off"
+usb="off"
+ehci="off"
+xhci="off"
+SharedFolderNameMachineMapping1="c/Users"
+SharedFolderPathMachineMapping1="\\\\?\\c:\\Users"
+VRDEActiveConnection="off"
+VRDEClients==0
+videocap="off"
+videocapaudio="off"
+capturescreens=""
+capturefilename="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\minikube.webm"
+captureres="1024x768"
+capturevideorate=512
+capturevideofps=25
+captureopts=""
+GuestMemoryBalloon=0
+GuestOSType="Linux26_64"
+GuestAdditionsRunLevel=2
+GuestAdditionsVersion="6.0.0 r127566"
+GuestAdditionsFacility_VirtualBox Base Driver=50,1670838175038
+GuestAdditionsFacility_VirtualBox System Service=50,1670838176273
+GuestAdditionsFacility_Seamless Mode=0,1670838175037
+GuestAdditionsFacility_Graphics Mode=0,1670838175036
+}
+I1212 11:43:03.610475   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:43:03.610475   19548 main.go:134] libmachine: Host-only MAC: 08002732ab96
+
+I1212 11:43:03.616962   19548 main.go:134] libmachine: Using SSH client type: native
+I1212 11:43:03.616962   19548 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x12abd60] 0x12aece0 <nil>  [] 0s} 127.0.0.1 61982 <nil> <nil>}
+I1212 11:43:03.616962   19548 main.go:134] libmachine: About to run SSH command:
+ip addr show
+I1212 11:43:03.747877   19548 main.go:134] libmachine: SSH cmd err, output: <nil>: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:0c:89:e6 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic eth0
+       valid_lft 86392sec preferred_lft 86392sec
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:32:ab:96 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.59.100/24 brd 192.168.59.255 scope global dynamic eth1
+       valid_lft 592sec preferred_lft 592sec
+4: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+
+I1212 11:43:03.747877   19548 main.go:134] libmachine: SSH returned: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:0c:89:e6 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic eth0
+       valid_lft 86392sec preferred_lft 86392sec
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:32:ab:96 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.59.100/24 brd 192.168.59.255 scope global dynamic eth1
+       valid_lft 592sec preferred_lft 592sec
+4: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+
+END SSH
+
+I1212 11:43:03.748422   19548 provision.go:138] copyHostCerts
+I1212 11:43:03.752005   19548 exec_runner.go:151] cp: C:\Users\LENOVO\.minikube\certs\ca.pem --> C:\Users\LENOVO\.minikube/ca.pem (1078 bytes)
+I1212 11:43:03.753891   19548 exec_runner.go:151] cp: C:\Users\LENOVO\.minikube\certs\cert.pem --> C:\Users\LENOVO\.minikube/cert.pem (1119 bytes)
+I1212 11:43:03.757366   19548 exec_runner.go:151] cp: C:\Users\LENOVO\.minikube\certs\key.pem --> C:\Users\LENOVO\.minikube/key.pem (1679 bytes)
+I1212 11:43:03.757915   19548 provision.go:112] generating server cert: C:\Users\LENOVO\.minikube\machines\server.pem ca-key=C:\Users\LENOVO\.minikube\certs\ca.pem private-key=C:\Users\LENOVO\.minikube\certs\ca-key.pem org=LENOVO.minikube san=[192.168.59.100 127.0.0.1 localhost 127.0.0.1 minikube minikube]
+I1212 11:43:04.041274   19548 provision.go:172] copyRemoteCerts
+I1212 11:43:04.077996   19548 ssh_runner.go:195] Run: sudo mkdir -p /etc/docker /etc/docker /etc/docker
+I1212 11:43:04.078502   19548 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:61982 SSHKeyPath:C:\Users\LENOVO\.minikube\machines\minikube\id_rsa Username:docker}
+I1212 11:43:04.169736   19548 ssh_runner.go:362] scp C:\Users\LENOVO\.minikube\certs\ca.pem --> /etc/docker/ca.pem (1078 bytes)
+I1212 11:43:04.224517   19548 ssh_runner.go:362] scp C:\Users\LENOVO\.minikube\machines\server.pem --> /etc/docker/server.pem (1200 bytes)
+I1212 11:43:04.308887   19548 ssh_runner.go:362] scp C:\Users\LENOVO\.minikube\machines\server-key.pem --> /etc/docker/server-key.pem (1675 bytes)
+I1212 11:43:04.367120   19548 provision.go:86] duration metric: configureAuth took 909.3545ms
+I1212 11:43:04.367120   19548 buildroot.go:189] setting minikube options for container-runtime
+I1212 11:43:04.367721   19548 config.go:180] Loaded profile config "minikube": Driver=virtualbox, ContainerRuntime=docker, KubernetesVersion=v1.25.3
+I1212 11:43:04.373411   19548 main.go:134] libmachine: Using SSH client type: native
+I1212 11:43:04.373994   19548 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x12abd60] 0x12aece0 <nil>  [] 0s} 127.0.0.1 61982 <nil> <nil>}
+I1212 11:43:04.373994   19548 main.go:134] libmachine: About to run SSH command:
+df --output=fstype / | tail -n 1
+I1212 11:43:04.495606   19548 main.go:134] libmachine: SSH cmd err, output: <nil>: tmpfs
+
+I1212 11:43:04.495606   19548 buildroot.go:70] root file system type: tmpfs
+I1212 11:43:04.496915   19548 provision.go:309] Updating docker unit: /lib/systemd/system/docker.service ...
+I1212 11:43:04.504760   19548 main.go:134] libmachine: Using SSH client type: native
+I1212 11:43:04.504801   19548 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x12abd60] 0x12aece0 <nil>  [] 0s} 127.0.0.1 61982 <nil> <nil>}
+I1212 11:43:04.504801   19548 main.go:134] libmachine: About to run SSH command:
+sudo mkdir -p /lib/systemd/system && printf %!s(MISSING) "[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+After=network.target  minikube-automount.service docker.socket
+Requires= minikube-automount.service docker.socket 
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=virtualbox --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP \$MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+" | sudo tee /lib/systemd/system/docker.service.new
+I1212 11:43:04.671308   19548 main.go:134] libmachine: SSH cmd err, output: <nil>: [Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+After=network.target  minikube-automount.service docker.socket
+Requires= minikube-automount.service docker.socket 
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=virtualbox --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP $MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+
+I1212 11:43:04.678012   19548 main.go:134] libmachine: Using SSH client type: native
+I1212 11:43:04.678012   19548 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x12abd60] 0x12aece0 <nil>  [] 0s} 127.0.0.1 61982 <nil> <nil>}
+I1212 11:43:04.678012   19548 main.go:134] libmachine: About to run SSH command:
+sudo diff -u /lib/systemd/system/docker.service /lib/systemd/system/docker.service.new || { sudo mv /lib/systemd/system/docker.service.new /lib/systemd/system/docker.service; sudo systemctl -f daemon-reload && sudo systemctl -f enable docker && sudo systemctl -f restart docker; }
+I1212 11:47:19.677375   19548 start.go:128] duration metric: createHost completed in 6m0.0038847s
+I1212 11:47:19.677375   19548 start.go:83] releasing machines lock for "minikube", held for 6m0.0044292s
+W1212 11:47:19.677928   19548 start.go:603] error starting host: creating host: create host timed out in 360.000000 seconds
+I1212 11:47:19.681224   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe showvminfo minikube --machinereadable
+I1212 11:47:19.786064   19548 main.go:134] libmachine: STDOUT:
+{
+name="minikube"
+groups="/"
+ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+UUID="d4c78b0a-7063-43f7-9cca-cbe93dcd10c9"
+CfgFile="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\minikube.vbox"
+SnapFldr="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\Snapshots"
+LogFldr="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\Logs"
+hardwareuuid="d4c78b0a-7063-43f7-9cca-cbe93dcd10c9"
+memory=2200
+pagefusion="off"
+vram=8
+cpuexecutioncap=100
+hpet="on"
+cpu-profile="host"
+chipset="piix3"
+firmware="BIOS"
+cpus=2
+pae="on"
+longmode="on"
+triplefaultreset="off"
+apic="on"
+x2apic="off"
+nested-hw-virt="off"
+cpuid-portability-level=0
+bootmenu="disabled"
+boot1="dvd"
+boot2="dvd"
+boot3="disk"
+boot4="none"
+acpi="on"
+ioapic="on"
+biosapic="apic"
+biossystemtimeoffset=0
+rtcuseutc="on"
+hwvirtex="on"
+nestedpaging="on"
+largepages="on"
+vtxvpid="on"
+vtxux="on"
+paravirtprovider="default"
+effparavirtprovider="kvm"
+VMState="running"
+VMStateChangeTime="2022-12-12T09:42:07.075000000"
+graphicscontroller="vboxvga"
+monitorcount=1
+accelerate3d="off"
+accelerate2dvideo="off"
+teleporterenabled="off"
+teleporterport=0
+teleporteraddress=""
+teleporterpassword=""
+tracing-enabled="off"
+tracing-allow-vm-access="off"
+tracing-config=""
+autostart-enabled="off"
+autostart-delay=0
+defaultfrontend=""
+vmprocpriority="default"
+storagecontrollername0="SATA"
+storagecontrollertype0="IntelAhci"
+storagecontrollerinstance0="0"
+storagecontrollermaxportcount0="30"
+storagecontrollerportcount0="30"
+storagecontrollerbootable0="on"
+"SATA-0-0"="C:\Users\LENOVO\.minikube\machines\minikube\boot2docker.iso"
+"SATA-ImageUUID-0-0"="4a398463-4403-4371-bfca-112fbb86962e"
+"SATA-tempeject"="off"
+"SATA-IsEjected"="off"
+"SATA-1-0"="C:\Users\LENOVO\.minikube\machines\minikube\disk.vmdk"
+"SATA-ImageUUID-1-0"="f0debdad-478f-4e16-8540-259322e8fe22"
+"SATA-2-0"="none"
+"SATA-3-0"="none"
+"SATA-4-0"="none"
+"SATA-5-0"="none"
+"SATA-6-0"="none"
+"SATA-7-0"="none"
+"SATA-8-0"="none"
+"SATA-9-0"="none"
+"SATA-10-0"="none"
+"SATA-11-0"="none"
+"SATA-12-0"="none"
+"SATA-13-0"="none"
+"SATA-14-0"="none"
+"SATA-15-0"="none"
+"SATA-16-0"="none"
+"SATA-17-0"="none"
+"SATA-18-0"="none"
+"SATA-19-0"="none"
+"SATA-20-0"="none"
+"SATA-21-0"="none"
+"SATA-22-0"="none"
+"SATA-23-0"="none"
+"SATA-24-0"="none"
+"SATA-25-0"="none"
+"SATA-26-0"="none"
+"SATA-27-0"="none"
+"SATA-28-0"="none"
+"SATA-29-0"="none"
+natnet1="nat"
+macaddress1="0800270C89E6"
+cableconnected1="on"
+nic1="nat"
+nictype1="virtio"
+nicspeed1="0"
+mtu="0"
+sockSnd="64"
+sockRcv="64"
+tcpWndSnd="64"
+tcpWndRcv="64"
+Forwarding(0)="ssh,tcp,127.0.0.1,61982,,22"
+hostonlyadapter2="VirtualBox Host-Only Ethernet Adapter #2"
+macaddress2="08002732AB96"
+cableconnected2="on"
+nic2="hostonly"
+nictype2="virtio"
+nicspeed2="0"
+nic3="none"
+nic4="none"
+nic5="none"
+nic6="none"
+nic7="none"
+nic8="none"
+hidpointing="ps2mouse"
+hidkeyboard="ps2kbd"
+uart1="off"
+uart2="off"
+uart3="off"
+uart4="off"
+lpt1="off"
+lpt2="off"
+audio="dsound"
+audio_out="off"
+audio_in="off"
+clipboard="disabled"
+draganddrop="disabled"
+SessionName="headless"
+VideoMode="720,400,0"@0,0 1
+vrde="off"
+usb="off"
+ehci="off"
+xhci="off"
+SharedFolderNameMachineMapping1="c/Users"
+SharedFolderPathMachineMapping1="\\\\?\\c:\\Users"
+VRDEActiveConnection="off"
+VRDEClients==0
+videocap="off"
+videocapaudio="off"
+capturescreens=""
+capturefilename="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\minikube.webm"
+captureres="1024x768"
+capturevideorate=512
+capturevideofps=25
+captureopts=""
+GuestMemoryBalloon=0
+GuestOSType="Linux26_64"
+GuestAdditionsRunLevel=2
+GuestAdditionsVersion="6.0.0 r127566"
+GuestAdditionsFacility_VirtualBox Base Driver=50,1670838175038
+GuestAdditionsFacility_VirtualBox System Service=50,1670838176273
+GuestAdditionsFacility_Seamless Mode=0,1670838175037
+GuestAdditionsFacility_Graphics Mode=0,1670838175036
+}
+I1212 11:47:19.786064   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:47:19.788260   19548 out.go:177] * Eliminando "minikube" en virtualbox...
+I1212 11:48:36.396398   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe showvminfo minikube --machinereadable
+I1212 11:48:36.462302   19548 main.go:134] libmachine: STDOUT:
+{
+name="minikube"
+groups="/"
+ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+UUID="d4c78b0a-7063-43f7-9cca-cbe93dcd10c9"
+CfgFile="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\minikube.vbox"
+SnapFldr="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\Snapshots"
+LogFldr="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\Logs"
+hardwareuuid="d4c78b0a-7063-43f7-9cca-cbe93dcd10c9"
+memory=2200
+pagefusion="off"
+vram=8
+cpuexecutioncap=100
+hpet="on"
+cpu-profile="host"
+chipset="piix3"
+firmware="BIOS"
+cpus=2
+pae="on"
+longmode="on"
+triplefaultreset="off"
+apic="on"
+x2apic="off"
+nested-hw-virt="off"
+cpuid-portability-level=0
+bootmenu="disabled"
+boot1="dvd"
+boot2="dvd"
+boot3="disk"
+boot4="none"
+acpi="on"
+ioapic="on"
+biosapic="apic"
+biossystemtimeoffset=0
+rtcuseutc="on"
+hwvirtex="on"
+nestedpaging="on"
+largepages="on"
+vtxvpid="on"
+vtxux="on"
+paravirtprovider="default"
+effparavirtprovider="kvm"
+VMState="running"
+VMStateChangeTime="2022-12-12T09:42:07.075000000"
+graphicscontroller="vboxvga"
+monitorcount=1
+accelerate3d="off"
+accelerate2dvideo="off"
+teleporterenabled="off"
+teleporterport=0
+teleporteraddress=""
+teleporterpassword=""
+tracing-enabled="off"
+tracing-allow-vm-access="off"
+tracing-config=""
+autostart-enabled="off"
+autostart-delay=0
+defaultfrontend=""
+vmprocpriority="default"
+storagecontrollername0="SATA"
+storagecontrollertype0="IntelAhci"
+storagecontrollerinstance0="0"
+storagecontrollermaxportcount0="30"
+storagecontrollerportcount0="30"
+storagecontrollerbootable0="on"
+"SATA-0-0"="C:\Users\LENOVO\.minikube\machines\minikube\boot2docker.iso"
+"SATA-ImageUUID-0-0"="4a398463-4403-4371-bfca-112fbb86962e"
+"SATA-tempeject"="off"
+"SATA-IsEjected"="off"
+"SATA-1-0"="C:\Users\LENOVO\.minikube\machines\minikube\disk.vmdk"
+"SATA-ImageUUID-1-0"="f0debdad-478f-4e16-8540-259322e8fe22"
+"SATA-2-0"="none"
+"SATA-3-0"="none"
+"SATA-4-0"="none"
+"SATA-5-0"="none"
+"SATA-6-0"="none"
+"SATA-7-0"="none"
+"SATA-8-0"="none"
+"SATA-9-0"="none"
+"SATA-10-0"="none"
+"SATA-11-0"="none"
+"SATA-12-0"="none"
+"SATA-13-0"="none"
+"SATA-14-0"="none"
+"SATA-15-0"="none"
+"SATA-16-0"="none"
+"SATA-17-0"="none"
+"SATA-18-0"="none"
+"SATA-19-0"="none"
+"SATA-20-0"="none"
+"SATA-21-0"="none"
+"SATA-22-0"="none"
+"SATA-23-0"="none"
+"SATA-24-0"="none"
+"SATA-25-0"="none"
+"SATA-26-0"="none"
+"SATA-27-0"="none"
+"SATA-28-0"="none"
+"SATA-29-0"="none"
+natnet1="nat"
+macaddress1="0800270C89E6"
+cableconnected1="on"
+nic1="nat"
+nictype1="virtio"
+nicspeed1="0"
+mtu="0"
+sockSnd="64"
+sockRcv="64"
+tcpWndSnd="64"
+tcpWndRcv="64"
+Forwarding(0)="ssh,tcp,127.0.0.1,61982,,22"
+hostonlyadapter2="VirtualBox Host-Only Ethernet Adapter #2"
+macaddress2="08002732AB96"
+cableconnected2="on"
+nic2="hostonly"
+nictype2="virtio"
+nicspeed2="0"
+nic3="none"
+nic4="none"
+nic5="none"
+nic6="none"
+nic7="none"
+nic8="none"
+hidpointing="ps2mouse"
+hidkeyboard="ps2kbd"
+uart1="off"
+uart2="off"
+uart3="off"
+uart4="off"
+lpt1="off"
+lpt2="off"
+audio="dsound"
+audio_out="off"
+audio_in="off"
+clipboard="disabled"
+draganddrop="disabled"
+SessionName="headless"
+VideoMode="720,400,0"@0,0 1
+vrde="off"
+usb="off"
+ehci="off"
+xhci="off"
+SharedFolderNameMachineMapping1="c/Users"
+SharedFolderPathMachineMapping1="\\\\?\\c:\\Users"
+VRDEActiveConnection="off"
+VRDEClients==0
+videocap="off"
+videocapaudio="off"
+capturescreens=""
+capturefilename="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\minikube.webm"
+captureres="1024x768"
+capturevideorate=512
+capturevideofps=25
+captureopts=""
+GuestMemoryBalloon=0
+GuestOSType="Linux26_64"
+GuestAdditionsRunLevel=2
+GuestAdditionsVersion="6.0.0 r127566"
+GuestAdditionsFacility_VirtualBox Base Driver=50,1670838175038
+GuestAdditionsFacility_VirtualBox System Service=50,1670838176273
+GuestAdditionsFacility_Seamless Mode=0,1670838175037
+GuestAdditionsFacility_Graphics Mode=0,1670838175036
+}
+I1212 11:48:36.462302   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:48:36.462302   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe controlvm minikube poweroff
+I1212 11:48:36.517057   19548 main.go:134] libmachine: Error closing SSH Client: close tcp 127.0.0.1:62040->127.0.0.1:61982: use of closed network connection
+I1212 11:48:36.517057   19548 main.go:134] libmachine: SSH cmd err, output: wait: remote command exited without exit status or exit signal: diff: can't stat '/lib/systemd/system/docker.service': No such file or directory
+Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /usr/lib/systemd/system/docker.service.
+
+I1212 11:48:36.517057   19548 buildroot.go:191] Error setting container-runtime options during provisioning ssh command error:
+command : sudo diff -u /lib/systemd/system/docker.service /lib/systemd/system/docker.service.new || { sudo mv /lib/systemd/system/docker.service.new /lib/systemd/system/docker.service; sudo systemctl -f daemon-reload && sudo systemctl -f enable docker && sudo systemctl -f restart docker; }
+err     : wait: remote command exited without exit status or exit signal
+output  : diff: can't stat '/lib/systemd/system/docker.service': No such file or directory
+Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /usr/lib/systemd/system/docker.service.
+I1212 11:48:36.517057   19548 machine.go:91] provisioned docker machine in 5m33.4721315s
+I1212 11:48:36.517057   19548 client.go:171] LocalClient.Create took 7m16.8401031s
+I1212 11:48:36.772509   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:48:36.772509   19548 main.go:134] libmachine: STDERR:
+{
+0%!.(MISSING).10%!.(MISSING).20%!.(MISSING).30%!.(MISSING).40%!.(MISSING).50%!.(MISSING).60%!.(MISSING).70%!.(MISSING).80%!.(MISSING).90%!.(MISSING).100%!
+(MISSING)}
+I1212 11:48:36.772509   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe unregistervm --delete minikube
+I1212 11:48:36.833639   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:48:36.833639   19548 main.go:134] libmachine: STDERR:
+{
+0%!.(MISSING).10%!.(MISSING).20%!.(MISSING).30%!.(MISSING).40%!.(MISSING).50%!.(MISSING).60%!.(MISSING).70%!.(MISSING).80%!.(MISSING).90%!.(MISSING).100%!
+(MISSING)}
+W1212 11:48:36.836129   19548 out.go:239] ! StartHost failed, but will try again: creating host: create host timed out in 360.000000 seconds
+I1212 11:48:36.836680   19548 start.go:618] Will try again in 5 seconds ...
+I1212 11:48:41.849180   19548 start.go:364] acquiring machines lock for minikube: {Name:mkcbc4b576aa61b66884ddcef13567e4c8f4f9fa Clock:{} Delay:500ms Timeout:13m0s Cancel:<nil>}
+I1212 11:48:41.849180   19548 start.go:368] acquired machines lock for "minikube" in 0s
+I1212 11:48:41.849778   19548 start.go:93] Provisioning new machine with config: &{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO:https://storage.googleapis.com/minikube/iso/minikube-v1.28.0-amd64.iso KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.36@sha256:8debc1b6a335075c5f99bfbf131b4f5566f68c6500dc5991817832e55fcc9456 Memory:2200 CPUs:2 DiskSize:20000 VMDriver: Driver:virtualbox HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:0 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:true DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.25.3 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP: Port:8443 KubernetesVersion:v1.25.3 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:C:\Users\LENOVO:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath: SocketVMnetClientPath:/opt/socket_vmnet/bin/socket_vmnet_client SocketVMnetPath:/var/run/socket_vmnet} &{Name: IP: Port:8443 KubernetesVersion:v1.25.3 ContainerRuntime:docker ControlPlane:true Worker:true}
+I1212 11:48:41.849778   19548 start.go:125] createHost starting for "" (driver="virtualbox")
+I1212 11:48:41.850467   19548 out.go:204] * Creando virtualbox VM (CPUs=2, Memory=2200MB, Disk=20000MB) ...
+I1212 11:48:41.851612   19548 start.go:159] libmachine.API.Create for "minikube" (driver="virtualbox")
+I1212 11:48:41.852118   19548 client.go:168] LocalClient.Create starting
+I1212 11:48:41.852192   19548 main.go:134] libmachine: Reading certificate data from C:\Users\LENOVO\.minikube\certs\ca.pem
+I1212 11:48:41.852758   19548 main.go:134] libmachine: Decoding PEM data...
+I1212 11:48:41.852758   19548 main.go:134] libmachine: Parsing certificate...
+I1212 11:48:41.852758   19548 main.go:134] libmachine: Reading certificate data from C:\Users\LENOVO\.minikube\certs\cert.pem
+I1212 11:48:41.853337   19548 main.go:134] libmachine: Decoding PEM data...
+I1212 11:48:41.853337   19548 main.go:134] libmachine: Parsing certificate...
+I1212 11:48:41.853337   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe --version
+I1212 11:48:41.878230   19548 main.go:134] libmachine: STDOUT:
+{
+6.1.18r142142
+}
+I1212 11:48:41.878230   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:48:41.878230   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe list hostonlyifs
+I1212 11:48:42.520811   19548 main.go:134] libmachine: STDOUT:
+{
+Name:            VirtualBox Host-Only Ethernet Adapter
+GUID:            e6c82392-8a6f-4ef4-baa0-61a8ed38e2d7
+DHCP:            Disabled
+IPAddress:       192.168.56.1
+NetworkMask:     255.255.255.0
+IPV6Address:     fe80::c2b6:2d2a:d1f4:82cf
+IPV6NetworkMaskPrefixLength: 64
+HardwareAddress: 0a:00:27:00:00:18
+MediumType:      Ethernet
+Wireless:        No
+Status:          Up
+VBoxNetworkName: HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter
+
+Name:            VirtualBox Host-Only Ethernet Adapter #2
+GUID:            fa03a698-bbd3-408d-9234-7ee55e3f65c0
+DHCP:            Disabled
+IPAddress:       192.168.59.1
+NetworkMask:     255.255.255.0
+IPV6Address:     fe80::3ed6:114d:3c99:a69
+IPV6NetworkMaskPrefixLength: 64
+HardwareAddress: 0a:00:27:00:00:45
+MediumType:      Ethernet
+Wireless:        No
+Status:          Up
+VBoxNetworkName: HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter #2
+
+}
+I1212 11:48:42.520811   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:48:42.525118   19548 main.go:134] libmachine: Downloading C:\Users\LENOVO\.minikube\cache\boot2docker.iso from file://C:/Users/LENOVO/.minikube/cache/iso/amd64/minikube-v1.28.0-amd64.iso...
+I1212 11:48:43.317861   19548 main.go:134] libmachine: Creating VirtualBox VM...
+I1212 11:48:43.317861   19548 main.go:134] libmachine: Creating SSH key...
+I1212 11:48:43.617952   19548 main.go:134] libmachine: Creating disk image...
+I1212 11:48:43.617952   19548 main.go:134] libmachine: Creating 20000 MB hard disk image...
+I1212 11:48:43.617952   19548 main.go:134] libmachine: Writing magic tar header
+I1212 11:48:43.617952   19548 main.go:134] libmachine: Writing SSH key tar header
+I1212 11:48:43.617952   19548 main.go:134] libmachine: Calling inner createDiskImage
+I1212 11:48:43.618949   19548 main.go:134] libmachine: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe convertfromraw stdin C:\Users\LENOVO\.minikube\machines\minikube\disk.vmdk 20971520000 --format VMDK
+I1212 11:48:43.618949   19548 main.go:134] libmachine: Starting command
+I1212 11:48:43.623953   19548 main.go:134] libmachine: Copying to stdin
+I1212 11:48:43.647948   19548 main.go:134] libmachine: Filling zeroes
+I1212 11:49:06.726208   19548 main.go:134] libmachine: Closing STDIN
+I1212 11:49:06.726208   19548 main.go:134] libmachine: Waiting on cmd
+I1212 11:49:06.753047   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe createvm --basefolder C:\Users\LENOVO\.minikube\machines\minikube --name minikube --register
+I1212 11:49:07.338203   19548 main.go:134] libmachine: STDOUT:
+{
+Virtual machine 'minikube' is created and registered.
+UUID: 5d429ac6-6726-46cd-bda1-2e2cf60e3e34
+Settings file: 'C:\Users\LENOVO\.minikube\machines\minikube\minikube\minikube.vbox'
+}
+I1212 11:49:07.338203   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:49:07.338203   19548 main.go:134] libmachine: VM CPUS: 2
+I1212 11:49:07.338203   19548 main.go:134] libmachine: VM Memory: 2200
+I1212 11:49:07.338203   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe modifyvm minikube --firmware bios --bioslogofadein off --bioslogofadeout off --bioslogodisplaytime 0 --biosbootmenu disabled --ostype Linux26_64 --cpus 2 --memory 2200 --acpi on --ioapic on --rtcuseutc on --natdnshostresolver1 on --natdnsproxy1 off --cpuhotplug off --pae on --hpet on --hwvirtex on --nestedpaging on --largepages on --vtxvpid on --accelerate3d off --boot1 dvd
+I1212 11:49:07.399933   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:49:07.399933   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:49:07.399933   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe modifyvm minikube --nic1 nat --nictype1 virtio --cableconnected1 on
+I1212 11:49:07.446748   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:49:07.446748   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:49:07.446748   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe storagectl minikube --name SATA --add sata --hostiocache on
+I1212 11:49:07.492966   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:49:07.492966   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:49:07.492966   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe storageattach minikube --storagectl SATA --port 0 --device 0 --type dvddrive --medium C:\Users\LENOVO\.minikube\machines\minikube\boot2docker.iso
+I1212 11:49:07.555546   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:49:07.555715   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:49:07.555715   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe storageattach minikube --storagectl SATA --port 1 --device 0 --type hdd --medium C:\Users\LENOVO\.minikube\machines\minikube\disk.vmdk
+I1212 11:49:07.618072   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:49:07.618343   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:49:07.618343   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe guestproperty set minikube /VirtualBox/GuestAdd/SharedFolders/MountPrefix /
+I1212 11:49:07.665205   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:49:07.665205   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:49:07.665205   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe guestproperty set minikube /VirtualBox/GuestAdd/SharedFolders/MountDir /
+I1212 11:49:07.711925   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:49:07.711925   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:49:07.711925   19548 main.go:134] libmachine: setting up shareDir '\\?\c:\Users' -> 'c/Users'
+I1212 11:49:07.711925   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe sharedfolder add minikube --name c/Users --hostpath \\?\c:\Users --automount
+I1212 11:49:07.773480   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:49:07.773480   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:49:07.773480   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe setextradata minikube VBoxInternal2/SharedFoldersEnableSymlinksCreate/c/Users 1
+I1212 11:49:07.820534   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:49:07.820534   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:49:07.820534   19548 main.go:134] libmachine: Starting the VM...
+I1212 11:49:07.820534   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe showvminfo minikube --machinereadable
+I1212 11:49:07.897878   19548 main.go:134] libmachine: STDOUT:
+{
+name="minikube"
+groups="/"
+ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+UUID="5d429ac6-6726-46cd-bda1-2e2cf60e3e34"
+CfgFile="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\minikube.vbox"
+SnapFldr="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\Snapshots"
+LogFldr="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\Logs"
+hardwareuuid="5d429ac6-6726-46cd-bda1-2e2cf60e3e34"
+memory=2200
+pagefusion="off"
+vram=8
+cpuexecutioncap=100
+hpet="on"
+cpu-profile="host"
+chipset="piix3"
+firmware="BIOS"
+cpus=2
+pae="on"
+longmode="on"
+triplefaultreset="off"
+apic="on"
+x2apic="off"
+nested-hw-virt="off"
+cpuid-portability-level=0
+bootmenu="disabled"
+boot1="dvd"
+boot2="dvd"
+boot3="disk"
+boot4="none"
+acpi="on"
+ioapic="on"
+biosapic="apic"
+biossystemtimeoffset=0
+rtcuseutc="on"
+hwvirtex="on"
+nestedpaging="on"
+largepages="on"
+vtxvpid="on"
+vtxux="on"
+paravirtprovider="default"
+effparavirtprovider="kvm"
+VMState="poweroff"
+VMStateChangeTime="2022-12-12T09:49:07.306000000"
+graphicscontroller="vboxvga"
+monitorcount=1
+accelerate3d="off"
+accelerate2dvideo="off"
+teleporterenabled="off"
+teleporterport=0
+teleporteraddress=""
+teleporterpassword=""
+tracing-enabled="off"
+tracing-allow-vm-access="off"
+tracing-config=""
+autostart-enabled="off"
+autostart-delay=0
+defaultfrontend=""
+vmprocpriority="default"
+storagecontrollername0="SATA"
+storagecontrollertype0="IntelAhci"
+storagecontrollerinstance0="0"
+storagecontrollermaxportcount0="30"
+storagecontrollerportcount0="30"
+storagecontrollerbootable0="on"
+"SATA-0-0"="C:\Users\LENOVO\.minikube\machines\minikube\boot2docker.iso"
+"SATA-ImageUUID-0-0"="8d0e866e-eba5-4aed-a15e-f35eb8a52b1f"
+"SATA-tempeject"="off"
+"SATA-IsEjected"="off"
+"SATA-1-0"="C:\Users\LENOVO\.minikube\machines\minikube\disk.vmdk"
+"SATA-ImageUUID-1-0"="70ef74da-5531-4ed6-891b-3fa8e2f29f0e"
+"SATA-2-0"="none"
+"SATA-3-0"="none"
+"SATA-4-0"="none"
+"SATA-5-0"="none"
+"SATA-6-0"="none"
+"SATA-7-0"="none"
+"SATA-8-0"="none"
+"SATA-9-0"="none"
+"SATA-10-0"="none"
+"SATA-11-0"="none"
+"SATA-12-0"="none"
+"SATA-13-0"="none"
+"SATA-14-0"="none"
+"SATA-15-0"="none"
+"SATA-16-0"="none"
+"SATA-17-0"="none"
+"SATA-18-0"="none"
+"SATA-19-0"="none"
+"SATA-20-0"="none"
+"SATA-21-0"="none"
+"SATA-22-0"="none"
+"SATA-23-0"="none"
+"SATA-24-0"="none"
+"SATA-25-0"="none"
+"SATA-26-0"="none"
+"SATA-27-0"="none"
+"SATA-28-0"="none"
+"SATA-29-0"="none"
+natnet1="nat"
+macaddress1="080027E31CAB"
+cableconnected1="on"
+nic1="nat"
+nictype1="virtio"
+nicspeed1="0"
+mtu="0"
+sockSnd="64"
+sockRcv="64"
+tcpWndSnd="64"
+tcpWndRcv="64"
+nic2="none"
+nic3="none"
+nic4="none"
+nic5="none"
+nic6="none"
+nic7="none"
+nic8="none"
+hidpointing="ps2mouse"
+hidkeyboard="ps2kbd"
+uart1="off"
+uart2="off"
+uart3="off"
+uart4="off"
+lpt1="off"
+lpt2="off"
+audio="dsound"
+audio_out="off"
+audio_in="off"
+clipboard="disabled"
+draganddrop="disabled"
+vrde="off"
+usb="off"
+ehci="off"
+xhci="off"
+SharedFolderNameMachineMapping1="c/Users"
+SharedFolderPathMachineMapping1="\\\\?\\c:\\Users"
+videocap="off"
+videocapaudio="off"
+capturescreens=""
+capturefilename="C:\\Users\\LENOVO\\.minikube\\machines\\minikube\\minikube\\minikube.webm"
+captureres="1024x768"
+capturevideorate=512
+capturevideofps=25
+captureopts=""
+GuestMemoryBalloon=0
+}
+I1212 11:49:07.897878   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:49:07.897878   19548 main.go:134] libmachine: Check network to re-create if needed...
+I1212 11:49:07.897878   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe list hostonlyifs
+I1212 11:49:08.006851   19548 main.go:134] libmachine: STDOUT:
+{
+Name:            VirtualBox Host-Only Ethernet Adapter
+GUID:            e6c82392-8a6f-4ef4-baa0-61a8ed38e2d7
+DHCP:            Disabled
+IPAddress:       192.168.56.1
+NetworkMask:     255.255.255.0
+IPV6Address:     fe80::c2b6:2d2a:d1f4:82cf
+IPV6NetworkMaskPrefixLength: 64
+HardwareAddress: 0a:00:27:00:00:18
+MediumType:      Ethernet
+Wireless:        No
+Status:          Up
+VBoxNetworkName: HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter
+
+Name:            VirtualBox Host-Only Ethernet Adapter #2
+GUID:            fa03a698-bbd3-408d-9234-7ee55e3f65c0
+DHCP:            Disabled
+IPAddress:       192.168.59.1
+NetworkMask:     255.255.255.0
+IPV6Address:     fe80::3ed6:114d:3c99:a69
+IPV6NetworkMaskPrefixLength: 64
+HardwareAddress: 0a:00:27:00:00:45
+MediumType:      Ethernet
+Wireless:        No
+Status:          Up
+VBoxNetworkName: HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter #2
+
+}
+I1212 11:49:08.006851   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:49:08.120726   19548 main.go:134] libmachine: Searching for hostonly interface for IPv4: 192.168.59.1 and Mask: ffffff00
+I1212 11:49:08.120726   19548 main.go:134] libmachine: Found: VirtualBox Host-Only Ethernet Adapter #2
+I1212 11:49:08.120726   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe list dhcpservers
+I1212 11:49:08.175591   19548 main.go:134] libmachine: STDOUT:
+{
+NetworkName:    HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter
+Dhcpd IP:       192.168.56.100
+LowerIPAddress: 192.168.56.101
+UpperIPAddress: 192.168.56.254
+NetworkMask:    255.255.255.0
+Enabled:        Yes
+Global Configuration:
+    minLeaseTime:     default
+    defaultLeaseTime: default
+    maxLeaseTime:     default
+    Forced options:   None
+    Suppressed opts.: None
+        1/legacy: 255.255.255.0
+Groups:               None
+Individual Configs:   None
+
+NetworkName:    HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter #2
+Dhcpd IP:       192.168.59.6
+LowerIPAddress: 192.168.59.100
+UpperIPAddress: 192.168.59.254
+NetworkMask:    255.255.255.0
+Enabled:        Yes
+Global Configuration:
+    minLeaseTime:     default
+    defaultLeaseTime: default
+    maxLeaseTime:     default
+    Forced options:   None
+    Suppressed opts.: None
+        1/legacy: 255.255.255.0
+Groups:               None
+Individual Configs:   None
+}
+I1212 11:49:08.175591   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:49:08.175591   19548 main.go:134] libmachine: Removing orphan DHCP servers...
+I1212 11:49:08.175591   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe list hostonlyifs
+I1212 11:49:08.285896   19548 main.go:134] libmachine: STDOUT:
+{
+Name:            VirtualBox Host-Only Ethernet Adapter
+GUID:            e6c82392-8a6f-4ef4-baa0-61a8ed38e2d7
+DHCP:            Disabled
+IPAddress:       192.168.56.1
+NetworkMask:     255.255.255.0
+IPV6Address:     fe80::c2b6:2d2a:d1f4:82cf
+IPV6NetworkMaskPrefixLength: 64
+HardwareAddress: 0a:00:27:00:00:18
+MediumType:      Ethernet
+Wireless:        No
+Status:          Up
+VBoxNetworkName: HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter
+
+Name:            VirtualBox Host-Only Ethernet Adapter #2
+GUID:            fa03a698-bbd3-408d-9234-7ee55e3f65c0
+DHCP:            Disabled
+IPAddress:       192.168.59.1
+NetworkMask:     255.255.255.0
+IPV6Address:     fe80::3ed6:114d:3c99:a69
+IPV6NetworkMaskPrefixLength: 64
+HardwareAddress: 0a:00:27:00:00:45
+MediumType:      Ethernet
+Wireless:        No
+Status:          Up
+VBoxNetworkName: HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter #2
+
+}
+I1212 11:49:08.285896   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:49:08.285896   19548 main.go:134] libmachine: Adding/Modifying DHCP server "192.168.59.2" with address range "192.168.59.100" - "192.168.59.254"...
+I1212 11:49:08.285896   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe list dhcpservers
+I1212 11:49:08.332333   19548 main.go:134] libmachine: STDOUT:
+{
+NetworkName:    HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter
+Dhcpd IP:       192.168.56.100
+LowerIPAddress: 192.168.56.101
+UpperIPAddress: 192.168.56.254
+NetworkMask:    255.255.255.0
+Enabled:        Yes
+Global Configuration:
+    minLeaseTime:     default
+    defaultLeaseTime: default
+    maxLeaseTime:     default
+    Forced options:   None
+    Suppressed opts.: None
+        1/legacy: 255.255.255.0
+Groups:               None
+Individual Configs:   None
+
+NetworkName:    HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter #2
+Dhcpd IP:       192.168.59.6
+LowerIPAddress: 192.168.59.100
+UpperIPAddress: 192.168.59.254
+NetworkMask:    255.255.255.0
+Enabled:        Yes
+Global Configuration:
+    minLeaseTime:     default
+    defaultLeaseTime: default
+    maxLeaseTime:     default
+    Forced options:   None
+    Suppressed opts.: None
+        1/legacy: 255.255.255.0
+Groups:               None
+Individual Configs:   None
+}
+I1212 11:49:08.332333   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:49:08.332333   19548 main.go:134] libmachine: Windows might ask for the permission to configure a dhcp server. Sometimes, such confirmation window is minimized in the taskbar.
+I1212 11:49:08.332333   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe dhcpserver modify --netname HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter #2 --ip 192.168.59.2 --netmask 255.255.255.0 --lowerip 192.168.59.100 --upperip 192.168.59.254 --enable
+I1212 11:49:08.395512   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:49:08.395512   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:49:08.395512   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe modifyvm minikube --nic2 hostonly --nictype2 virtio --nicpromisc2 deny --hostonlyadapter2 VirtualBox Host-Only Ethernet Adapter #2 --cableconnected2 on
+I1212 11:49:08.473768   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:49:08.473768   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:49:08.473768   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe modifyvm minikube --natpf1 delete ssh
+I1212 11:49:08.535732   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:49:08.535819   19548 main.go:134] libmachine: STDERR:
+{
+VBoxManage.exe: error: Code E_INVALIDARG (0x80070057) - One or more arguments are invalid (extended info not available)
+VBoxManage.exe: error: Context: "RemoveRedirect(Bstr(ValueUnion.psz).raw())" at line 1920 of file VBoxManageModifyVM.cpp
+}
+I1212 11:49:08.535819   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe modifyvm minikube --natpf1 ssh,tcp,127.0.0.1,62205,,22
+I1212 11:49:08.612762   19548 main.go:134] libmachine: STDOUT:
+{
+}
+I1212 11:49:08.612762   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:49:08.612762   19548 main.go:134] libmachine: COMMAND: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe startvm minikube --type headless
+I1212 11:49:13.874731   19548 main.go:134] libmachine: STDOUT:
+{
+Waiting for VM "minikube" to power on...
+VM "minikube" has been successfully started.
+}
+I1212 11:49:13.874731   19548 main.go:134] libmachine: STDERR:
+{
+}
+I1212 11:49:13.874731   19548 main.go:134] libmachine: Waiting for an IP...
+I1212 11:49:13.874731   19548 main.go:134] libmachine: Getting to WaitForSSH function...
+I1212 11:49:13.880268   19548 main.go:134] libmachine: Using SSH client type: native
+I1212 11:49:13.880811   19548 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x12abd60] 0x12aece0 <nil>  [] 0s} 127.0.0.1 62205 <nil> <nil>}
+I1212 11:49:13.880811   19548 main.go:134] libmachine: About to run SSH command:
+exit 0
+
+* 
