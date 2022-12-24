@@ -14,6 +14,7 @@ const App = () => {
 
   const selectMessage = (message) => {
     setActiveMessage(message)
+    console.log(message)
   }
 
   const handleMessageChange = (event) => {
@@ -28,7 +29,7 @@ const App = () => {
     event.preventDefault()
     let createMessage = {
       id: Math.floor(Math.random()*10000),
-      text: newMessage,
+      content: newMessage,
       date:  Math.floor(Math.random()*10000),
       responses: []   
     }
@@ -45,7 +46,7 @@ const App = () => {
     let id = activeMessage.id
     let response = {
       id: Math.floor(Math.random()*10000),
-      text: newResponse,
+      content: newResponse,
       date:  Math.floor(Math.random()*10000)   
     }
     let message = messages.find(m => m.id === id)
@@ -63,7 +64,9 @@ const App = () => {
   useEffect(() => {
     messageService
       .getAll()
-      .then(initialMessages => { setMessages(initialMessages)
+      .then(initialMessages => { 
+        setMessages(initialMessages)
+        console.log(messages)
       })
     }, [])
 
@@ -101,7 +104,7 @@ const Message = ({message, selectMessage}) => {
 
   return(
     <div>
-      <li onClick={() => selectMessage(message)}>{message.text}</li>
+      <li onClick={() => selectMessage(message)}>{message.content}</li>
     </div>
   )
   
@@ -111,7 +114,7 @@ const MessageResponses = ({activeMessage, postResponse, newResponse, handleRespo
   if(activeMessage){
     return(
       <div>
-        <h3>{activeMessage.text}</h3>
+        <h3>{activeMessage.content}</h3>
         {activeMessage.responses ?
           <ul>
           {activeMessage.responses.map(response => 

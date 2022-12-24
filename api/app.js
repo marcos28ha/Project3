@@ -9,7 +9,8 @@ const router = new Router();
 const newMessage = async({request, response}) => {
   const body = request.body({ type: "json" })
   const params = await body.value
-  const content = params.content
+  console.log("params" + JSON.stringify(params))
+  const content = params.text
 
   response.body = await createMessage(content)
 }

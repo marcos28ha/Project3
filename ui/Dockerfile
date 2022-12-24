@@ -1,6 +1,6 @@
 FROM node:alpine
 
-EXPOSE 7778
+EXPOSE 3000
 
 WORKDIR /app
 

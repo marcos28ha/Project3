@@ -22,6 +22,7 @@ if(PGPASS){
   database = Deno.env.get("PGDATABASE");
   username = Deno.env.get("PGUSERNAME");
   password = Deno.env.get("PGPASSWORD");
+  console.log(host)
 }
 
 

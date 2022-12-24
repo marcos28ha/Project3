@@ -3,9 +3,7 @@ import sql from './database.js'
 const getAll = async() => {
     let messages = await sql`SELECT * FROM messages`
     let messagesWithResponse = await Promise.all(messages.map(async function(m){
-        console.log("BEFORE:" + JSON.stringify(m))
         m.responses = await getResponsesForMessage(m.id)
-        console.log("AFTER" + JSON.stringify(m))
         return m
     }))
     console.log(messagesWithResponse)
